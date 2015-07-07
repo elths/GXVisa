@@ -1,0 +1,56 @@
+﻿<UserControl
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:dxb="http://schemas.devexpress.com/winfx/2008/xaml/bars"
+             xmlns:dxg="http://schemas.devexpress.com/winfx/2008/xaml/grid" xmlns:dxe="http://schemas.devexpress.com/winfx/2008/xaml/editors" x:Class="visa.CLEINT.View.CountryAdmin"
+             mc:Ignorable="d" Height="650" Width="750" >
+
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/Style/StyleEdit.xaml" />
+                <ResourceDictionary Source="/Style/StyleBar.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </UserControl.Resources>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30" />
+            <RowDefinition Height="50" />
+            <RowDefinition  />
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0" Height="30" VerticalAlignment="Top">
+            <dxb:BarManager   Name="MainBar"   BarsSource="{Binding Bars}" BarTemplate="{StaticResource barTemplate}" BarStyle="{StaticResource barStyle}" AllowCustomization="False"   AllowHotCustomization="False" AllowQuickCustomization="False" AllowUIAutomationSupport="False"/>
+
+        </Grid>
+        <Grid Name="EditGrid"  Grid.Row="1">
+            <TextBlock HorizontalAlignment="Left" Margin="18,22,0,0" Grid.Row="1" TextWrapping="Wrap" Text="中文名" VerticalAlignment="Top"/>
+
+
+            <dxe:TextEdit Validate="EmptyValidate" InvalidValueBehavior="AllowLeaveEditor"  Name="txtName"  Text="{Binding FCountry}"  HorizontalAlignment="Left" Margin="75,18,0,0" Grid.Row="1" VerticalAlignment="Top" Width="164"/>
+            <TextBlock HorizontalAlignment="Left" Margin="274,22,0,0" TextWrapping="Wrap" Text="英文名" VerticalAlignment="Top"/>
+            <dxe:TextEdit        Validate="EmptyValidate" InvalidValueBehavior="AllowLeaveEditor" Name="txtEnName"  Text="{Binding FCountryEn}" HorizontalAlignment="Left" Margin="323,20,0,0" VerticalAlignment="Top" Width="164"/>
+            <TextBlock HorizontalAlignment="Left" Margin="526,22,0,0" TextWrapping="Wrap" Text="缩写" VerticalAlignment="Top"/>
+            <dxe:TextEdit          x:Name="txtShortName"  Text="{Binding Fcountryshort}" HorizontalAlignment="Left" Margin="575,20,0,0" VerticalAlignment="Top" Width="164"/>
+
+        </Grid>
+
+        <dxg:GridControl SelectedItemChanged="MainGrid_SelectedItemChanged"  Name="MainGrid" ItemsSource="{Binding}"  AutoGenerateColumns="None" Grid.Row="2" Margin="0,0,0,0">
+            <dxg:GridControl.Columns>
+                <dxg:GridColumn Width="200"   FieldName="FCountry" Header="国家中文名" />
+                <dxg:GridColumn   Width="200" FieldName="FCountryEn" Header="国家英文名" />
+                <dxg:GridColumn   Width="200" FieldName="Fcountryshort" Header="缩写" />
+            </dxg:GridControl.Columns>
+
+            <dxg:GridControl.View>
+                <dxg:TableView AllowEditing="False"  ShowTotalSummary="True" ShowGroupPanel="False"/>
+            </dxg:GridControl.View>
+        </dxg:GridControl>
+
+
+    </Grid>
+</UserControl>

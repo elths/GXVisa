@@ -1,0 +1,49 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:dxb="http://schemas.devexpress.com/winfx/2008/xaml/bars"
+                    >
+
+
+    <DataTemplate x:Key="itemTemplate">
+        <ContentControl>
+            <dxb:BarButtonItem Content="{Binding Caption}"
+                                   Glyph="{Binding SmallGlyph}"
+                                   LargeGlyph="{Binding LargeGlyph}"
+                                   GlyphAlignment="Top"
+                                   BarItemDisplayMode="Content"
+                                   Command="{Binding}"/>
+        </ContentControl>
+    </DataTemplate>
+    <DataTemplate x:Key="subItemTemplate">
+        <ContentControl>
+            <dxb:BarSubItem  Content="{Binding Caption}"
+                                    Glyph="{Binding SmallGlyph}"
+                                    LargeGlyph="{Binding LargeGlyph}"
+                                    GlyphAlignment="Left"
+                                    BarItemDisplayMode="Content"
+                                    ItemLinksSource="{Binding Commands}"
+                                    ItemTemplate="{StaticResource itemTemplate}"
+                                    Command="{Binding}"/>
+        </ContentControl>
+    </DataTemplate>
+    <!--<local:CommandTemplateSelector x:Key="itemTemplateSelector"/>-->
+    <!--<Style x:Key="barStyle" TargetType="dxb:BarButtonItem">
+        <Setter Property="Content" Value="{Binding Caption}" />
+        <Setter Property="Glyph" Value="{Binding SmallGlyph}" />
+        <Setter Property="LargeGlyph" Value="{Binding LargeGlyph}" />
+        <Setter Property="GlyphAlignment" Value="{Binding Top}" />
+        <Setter Property="BarItemDisplayMode" Value="{Binding Content}" />
+        <Setter Property="Command" Value="{Binding}" />
+    </Style>-->
+
+    <Style x:Key="barStyle" TargetType="dxb:Bar">
+        <Setter Property="ItemTemplate" Value="{StaticResource itemTemplate}"/>
+    </Style>
+    
+    <DataTemplate x:Key="barTemplate">
+        <ContentControl>
+            <dxb:Bar  IsMainMenu="True"  Caption="{Binding Name}"
+                             ItemLinksSource="{Binding Commands}"  />
+        </ContentControl>
+    </DataTemplate>
+</ResourceDictionary>

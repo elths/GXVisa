@@ -1,0 +1,197 @@
+﻿<UserControl x:Class="visa.CLEINT.View.AuditSent"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:dxb="http://schemas.devexpress.com/winfx/2008/xaml/bars"
+            xmlns:dxe="http://schemas.devexpress.com/winfx/2008/xaml/editors"
+              xmlns:dxg="http://schemas.devexpress.com/winfx/2008/xaml/grid"
+            mc:Ignorable="d"  
+            >
+
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/Style/StyleEdit.xaml" />
+                <ResourceDictionary Source="/Style/StyleBar.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </UserControl.Resources>
+
+    <TabControl x:Name="MainTab">
+        <TabItem Header="提交报审名单">
+
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition Height="50 "/>
+                    <RowDefinition Height="150"/>
+                    <RowDefinition  Height="80 "/>
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+
+
+                <dxb:BarManager  Grid.Row="0"   BarsSource="{Binding Bars}" BarTemplate="{StaticResource barTemplate}" BarStyle="{StaticResource barStyle}" AllowCustomization="False"   AllowHotCustomization="False" AllowQuickCustomization="False" AllowUIAutomationSupport="False">
+                </dxb:BarManager>
+                <Grid Grid.Row="1" >
+                    <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="查询已送审名单:" VerticalAlignment="Top" Margin="58,16,0,0"/>
+                    <dxe:ComboBoxEdit Name="cbListSend" SelectedIndexChanged="cbListSend_SelectedIndexChanged"  HorizontalAlignment="Left" Margin="187,16,0,0" VerticalAlignment="Top" Width="150"/>
+                </Grid>
+                <Grid Grid.Row="2">
+                    <TextBlock HorizontalAlignment="Left" Margin="93,16,0,0" Grid.Row="2" TextWrapping="Wrap" Text="越南公司:" VerticalAlignment="Top"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="117,49,0,0" Grid.Row="2" TextWrapping="Wrap" Text="日期:" VerticalAlignment="Top"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="43,78,0,0" Grid.Row="2" TextWrapping="Wrap" Text="报审名单编号DSN:" VerticalAlignment="Top"/>
+                    <dxe:ComboBoxEdit SelectedIndexChanged="cbVietnamCompany_SelectedIndexChanged"  x:Name="cbVietnamCompany"  HorizontalAlignment="Left" Margin="187,14,0,0" Grid.Row="2" VerticalAlignment="Top" Width="150"/>
+                    <dxe:DateEdit IsEnabled="False"  Name="txtDate"  HorizontalAlignment="Left" Margin="187,46,0,0" Grid.Row="2" VerticalAlignment="Top" Width="150"/>
+                    <dxe:TextEdit IsEnabled="False" Name="txtDSN"  HorizontalAlignment="Left" Margin="187,78,0,0" Grid.Row="2" VerticalAlignment="Top" Width="150"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="446,-29,0,0" TextWrapping="Wrap" Text="信息:" VerticalAlignment="Top" RenderTransformOrigin="0.558,-1.705"/>
+                    <RichTextBox Name="txtMessageInfo"  HorizontalAlignment="Left" Height="132" Margin="512,-32,0,0" VerticalAlignment="Top" Width="408">
+                        <FlowDocument>
+                            <Paragraph>
+                                <Run Text=""/>
+                            </Paragraph>
+                        </FlowDocument>
+                    </RichTextBox>
+                    <dxe:TextEdit  x:Name="txtSpecial" NullText="自定义越南公司名" Text ="{Binding EditValue, ElementName=cbVietnamCompany, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}"  HorizontalAlignment="Left" Margin="354,14,0,0" VerticalAlignment="Top" Width="119"/>
+                </Grid>
+                <Grid Grid.Row="3">
+
+                    <TextBlock HorizontalAlignment="Left" Margin="16,16,0,0" Grid.Row="3" TextWrapping="Wrap" Text="扫描/录入签证自动编号:" VerticalAlignment="Top"/>
+                    <dxe:TextEdit NullText="点击此处后扫描条形码或输入签证自动条形码编号后回车"  Name="txtQZID" KeyUp="txtFQZID_KeyUp"  HorizontalAlignment="Left" Margin="187,13,0,0" VerticalAlignment="Top" Width="326"/>
+                    <Button Click="btnStopSend_Click"  Name="btnStopSend"  Content="取消签证申请" HorizontalAlignment="Left" Margin="540,14,0,0" Grid.Row="3" VerticalAlignment="Top" Width="141"/>
+                    <Button Click="btnCheckUnRead_Click"  Name="btnCheckUnRead"  Content="查看已提交未扫描录入的申请" HorizontalAlignment="Left" Margin="714,14,0,0" Grid.Row="3" VerticalAlignment="Top" Width="193"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="16,49,0,0" TextWrapping="Wrap" Text="扫描/录入表二编号:" VerticalAlignment="Top"/>
+                    <dxe:TextEdit NullText="点击此处后扫描表二条形码或输入表二名单号码"  x:Name="txtSubmitNo" KeyUp="txtSubmitNo_KeyUp"  HorizontalAlignment="Left" Margin="187,46,0,0" VerticalAlignment="Top" Width="326"/>
+                </Grid>
+                <Grid Grid.Row="4">
+                    <dxg:GridControl ItemsSource="{Binding}" CustomUnboundColumnData="gridMain_CustomUnboundColumnData"  Name="gridMain"  AutoGenerateColumns="None" Margin="0,0"  >
+                        <dxg:GridControl.Columns>
+                            <dxg:GridColumn  Width="40" HorizontalHeaderContentAlignment="Center"  UnboundType="Integer" FieldName="STT" />
+                            <dxg:GridColumn   Width="120" FieldName="FName" Header="姓名" />
+                            <dxg:GridColumn   Width="120" FieldName="FBirthDay" Header="生日" />
+                            <dxg:GridColumn   Width="120" FieldName="FSex" Header="性别" />
+                            <dxg:GridColumn   Width="120" FieldName="FBirthNationlityEn" Header="原来国籍" />
+                            <dxg:GridColumn   Width="120" FieldName="FBirthNationlityPresentEn" Header="现在国籍" />
+                            <dxg:GridColumn   Width="120" FieldName="FPassportNo" Header="护照号码" />
+                            <dxg:GridColumn   Width="120" FieldName="FProfessionWork" Header="职业" />
+                            <dxg:GridColumn   Width="120" FieldName="FDurationBegin" Header="出境日期" />
+                            <dxg:GridColumn   Width="120" FieldName="FPurpose" Header="出境目的" />
+                            <dxg:GridColumn   Width="120" FieldName="DurationName" Header="出境时长" />
+                            <dxg:GridColumn   Width="120" FieldName="TimesName" Header="次数" />
+                            <dxg:GridColumn   Width="120" FieldName="FSysMemo" Header="备注" />
+                        </dxg:GridControl.Columns>
+                        <dxg:GridControl.View>
+                            <dxg:TableView   AllowEditing="False"  ShowTotalSummary="True" ShowGroupPanel="False">
+                                <dxg:TableView.RowStyle>
+                                    <Style 
+            TargetType="{x:Type dxg:GridRowContent}">
+                                        <Style.Triggers>
+                                            <DataTrigger Binding="{Binding Path=Row.iType}" Value="1">
+                                                <Setter Property="Foreground" Value="Black" />
+                                            </DataTrigger>
+                                            <DataTrigger Binding="{Binding Path=Row.iType}" Value="2">
+                                                <Setter Property="Foreground" Value="Green" />
+                                            </DataTrigger>
+                                            <DataTrigger Binding="{Binding Path=Row.iType}" Value="3">
+                                                <Setter Property="Foreground" Value="Blue" />
+                                            </DataTrigger>
+                                            <DataTrigger Binding="{Binding Path=Row.iType}" Value="4">
+                                                <Setter Property="Foreground" Value="Red" />
+                                            </DataTrigger>
+                                            <DataTrigger Binding="{Binding Path=Row.iType}" Value="5">
+                                                <Setter Property="Foreground" Value="Green" />
+                                            </DataTrigger>
+                                            <DataTrigger Binding="{Binding Path=Row.iType}" Value="6">
+                                                <Setter Property="Foreground" Value="Blue" />
+                                            </DataTrigger>
+                                            <DataTrigger Binding="{Binding Path=Row.iType}" Value="7">
+                                                <Setter Property="Foreground" Value="Blue" />
+                                            </DataTrigger>
+                                            <DataTrigger Binding="{Binding Path=Row.iType}" Value="8">
+                                                <Setter Property="Foreground" Value="Red" />
+                                            </DataTrigger>
+                                            <DataTrigger Binding="{Binding Path=Row.iType}" Value="9">
+                                                <Setter Property="Foreground" Value="Orange" />
+                                            </DataTrigger>
+                                            <DataTrigger Binding="{Binding Path=Row.iType}" Value="10">
+                                                <Setter Property="Foreground" Value="Blue" />
+                                            </DataTrigger>
+                                            <DataTrigger Binding="{Binding Path=Row.iType}" Value="11">
+                                                <Setter Property="Foreground" Value="Pink" />
+                                            </DataTrigger>
+                                            <DataTrigger Binding="{Binding Path=Row.iType}" Value="12">
+                                                <Setter Property="Foreground" Value="Green" />
+                                            </DataTrigger>
+                                            <DataTrigger Binding="{Binding Path=Row.iType}" Value="13">
+                                                <Setter Property="Foreground" Value="Pink" />
+                                            </DataTrigger>
+                                            <DataTrigger Binding="{Binding Path=Row.iType}" Value="14">
+                                                <Setter Property="Foreground" Value="Blue" />
+                                            </DataTrigger>
+                                            <DataTrigger Binding="{Binding Path=Row.iType}" Value="15">
+                                                <Setter Property="Foreground" Value="Red" />
+                                            </DataTrigger>
+                                            <DataTrigger Binding="{Binding Path=Row.iType}" Value="16">
+                                                <Setter Property="Foreground" Value="Gray" />
+                                            </DataTrigger>
+                                            <DataTrigger Binding="{Binding Path=Row.iType}" Value="17">
+                                                <Setter Property="Foreground" Value="Blue" />
+                                            </DataTrigger>
+                                            <DataTrigger Binding="{Binding Path=Row.iType}" Value="18">
+                                                <Setter Property="Foreground" Value="Red" />
+                                            </DataTrigger>
+                                            <DataTrigger Binding="{Binding Path=Row.iType}" Value="19">
+                                                <Setter Property="Foreground" Value="Blue" />
+                                            </DataTrigger>
+                                            <DataTrigger Binding="{Binding Path=Row.iType}" Value="20">
+                                                <Setter Property="Foreground" Value="Red" />
+                                            </DataTrigger>
+                                            <DataTrigger Binding="{Binding Path=Row.iType}" Value="21">
+                                                <Setter Property="Foreground" Value="Gray" />
+                                            </DataTrigger>
+                                            <DataTrigger Binding="{Binding Path=Row.iType}" Value="22">
+                                                <Setter Property="Foreground" Value="Gray" />
+                                            </DataTrigger>
+                                            <DataTrigger Binding="{Binding Path=Row.iType}" Value="23">
+                                                <Setter Property="Foreground" Value="Gray" />
+                                            </DataTrigger>
+                                            <DataTrigger Binding="{Binding Path=Row.iType}" Value="24">
+                                                <Setter Property="Foreground" Value="Gray" />
+                                            </DataTrigger>
+                                            <DataTrigger Binding="{Binding Path=Row.iType}" Value="25">
+                                                <Setter Property="Foreground" Value="Black" />
+                                            </DataTrigger>
+                                            <DataTrigger Binding="{Binding Path=Row.iType}" Value="26">
+                                                <Setter Property="Foreground" Value="Black" />
+                                            </DataTrigger>
+                                            <DataTrigger Binding="{Binding Path=Row.iType}" Value="27">
+                                                <Setter Property="Foreground" Value="Gray" />
+                                            </DataTrigger>
+                                            <DataTrigger Binding="{Binding Path=Row.iType}" Value="28">
+                                                <Setter Property="Foreground" Value="Gray" />
+                                            </DataTrigger>
+                                            <DataTrigger Binding="{Binding Path=Row.iType}" Value="29">
+                                                <Setter Property="Foreground" Value="Gray" />
+                                            </DataTrigger>
+                                            <DataTrigger Binding="{Binding Path=Row.iType}" Value="30">
+                                                <Setter Property="Foreground" Value="Gray" />
+                                            </DataTrigger>
+                                            <DataTrigger Binding="{Binding Path=Row.iType}" Value="31">
+                                                <Setter Property="Foreground" Value="Gray" />
+                                            </DataTrigger>
+                                            <DataTrigger Binding="{Binding Path=Row.iType}" Value="32">
+                                                <Setter Property="Foreground" Value="Gray" />
+                                            </DataTrigger>
+                                        </Style.Triggers>
+                                    </Style>
+                                </dxg:TableView.RowStyle>
+                            </dxg:TableView>
+                        </dxg:GridControl.View>
+                    </dxg:GridControl>
+
+                </Grid>
+            </Grid>
+        </TabItem>
+    </TabControl>
+
+</UserControl>

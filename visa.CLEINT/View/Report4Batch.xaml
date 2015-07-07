@@ -1,0 +1,40 @@
+﻿<UserControl x:Class="visa.CLEINT.View.Report4Batch"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:dxp="http://schemas.devexpress.com/winfx/2008/xaml/printing"  
+             xmlns:dxg="http://schemas.devexpress.com/winfx/2008/xaml/grid" 
+             xmlns:dxe="http://schemas.devexpress.com/winfx/2008/xaml/editors"
+             mc:Ignorable="d" 
+             d:DesignHeight="800" d:DesignWidth="800">
+    <TabControl x:Name="MainTab" Margin="0,-0,-0,0">
+        <TabItem Header="打印/导出签证格式四">
+
+            <Grid>
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="120"/>
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+                <Grid Grid.Row="0">
+                    <Button Name="btnGenReport" Click="btnGenReport_Click"  Content="根据日期生成报表" HorizontalAlignment="Left" Margin="380,14,0,0" VerticalAlignment="Top" Width="134" />
+                    <TextBlock HorizontalAlignment="Left" Margin="15,74,0,0" TextWrapping="Wrap" Text="设置报表标题:" VerticalAlignment="Top"/>
+                    <dxe:TextEdit Text="表格四"  Name="txtReportTitle"  HorizontalAlignment="Left" Margin="99,71,0,0" VerticalAlignment="Top" Width="150"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="16,17,0,0" TextWrapping="Wrap" Text="选择审批日期:" VerticalAlignment="Top"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="206,17,0,0" TextWrapping="Wrap" Text="到" VerticalAlignment="Top"/>
+                    <Button x:Name="btnGenReport_Copy" Click="btnGenReportByNumber_Click"  Content="根据号码生成报表" HorizontalAlignment="Left" Margin="380,45,0,0" VerticalAlignment="Top" Width="134" />
+                </Grid>
+                <Grid Grid.Row="1">
+                    <dxp:DocumentPreview Name="MainPreview" />
+                </Grid>
+                <dxe:DateEdit  x:Name="cbDateFrom" MaskUseAsDisplayFormat="True"  HorizontalAlignment="Left" Margin="101,15,0,0" VerticalAlignment="Top" Width="95" />
+                <dxe:DateEdit  x:Name="cbDateTo" MaskUseAsDisplayFormat="True"  HorizontalAlignment="Left" Margin="232,15,0,0" VerticalAlignment="Top" Width="95" />
+                <TextBlock HorizontalAlignment="Left" Margin="17,45,0,0" TextWrapping="Wrap" Text="选择签证号码:" VerticalAlignment="Top"/>
+                <dxe:TextEdit NullText="0"   MaskType="RegEx"  Mask="\d+"  x:Name="txtStartNum"  HorizontalAlignment="Left" Margin="156,45,0,0" VerticalAlignment="Top" Width="80"/>
+                <dxe:TextEdit NullText="0"  MaskType="RegEx"  Mask="\d+" x:Name="txtEndNum"  HorizontalAlignment="Left" Margin="246,45,0,0" VerticalAlignment="Top" Width="80"/>
+                <dxe:TextEdit x:Name="txtLetter"  HorizontalAlignment="Left" Margin="101,45,0,0" VerticalAlignment="Top" Width="40"/>
+            </Grid>
+        </TabItem>
+    </TabControl>
+</UserControl>

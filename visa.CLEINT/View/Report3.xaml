@@ -1,0 +1,78 @@
+﻿<UserControl x:Class="visa.CLEINT.View.Report3"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:dxb="http://schemas.devexpress.com/winfx/2008/xaml/bars"
+            xmlns:dxe="http://schemas.devexpress.com/winfx/2008/xaml/editors"
+              xmlns:dxg="http://schemas.devexpress.com/winfx/2008/xaml/grid"
+            mc:Ignorable="d" >
+
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/Style/StyleEdit.xaml" />
+                <ResourceDictionary Source="/Style/StyleBar.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </UserControl.Resources>
+
+    <TabControl x:Name="MainTab" >
+        <TabItem Header="打印/导出签证格式三">
+
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition Height="50 "/>
+                    <RowDefinition Height="150"/>
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+
+
+                <dxb:BarManager  Grid.Row="0"   BarsSource="{Binding Bars}" BarTemplate="{StaticResource barTemplate}" BarStyle="{StaticResource barStyle}" AllowCustomization="False"   AllowHotCustomization="False" AllowQuickCustomization="False" AllowUIAutomationSupport="False">
+                </dxb:BarManager>
+                <Grid Grid.Row="1" >
+                    <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="查询已送审名单:" VerticalAlignment="Top" Margin="58,16,0,0"/>
+                    <dxe:ComboBoxEdit Name="cbListSend" SelectedIndexChanged="cbListSend_SelectedIndexChanged"  HorizontalAlignment="Left" Margin="187,16,0,0" VerticalAlignment="Top" Width="150"/>
+                </Grid>
+                <Grid Grid.Row="2">
+                    <TextBlock HorizontalAlignment="Left" Margin="93,16,0,0" Grid.Row="2" TextWrapping="Wrap" Text="越南公司:" VerticalAlignment="Top"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="117,49,0,0" Grid.Row="2" TextWrapping="Wrap" Text="日期:" VerticalAlignment="Top"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="43,78,0,0" Grid.Row="2" TextWrapping="Wrap" Text="报审名单编号DSN:" VerticalAlignment="Top"/>
+                    <dxe:ComboBoxEdit IsEnabled="False"  Name="cbVietnamCompany"  HorizontalAlignment="Left" Margin="187,14,0,0" Grid.Row="2" VerticalAlignment="Top" Width="150"/>
+                    <dxe:DateEdit IsEnabled="False"  Name="txtDate"  HorizontalAlignment="Left" Margin="187,46,0,0" Grid.Row="2" VerticalAlignment="Top" Width="150"/>
+                    <dxe:TextEdit IsEnabled="False" Name="txtDSN"  HorizontalAlignment="Left" Margin="187,78,0,0" Grid.Row="2" VerticalAlignment="Top" Width="150"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="448,-34,0,0" TextWrapping="Wrap" Text="信息:" VerticalAlignment="Top" RenderTransformOrigin="0.558,-1.705"/>
+                    <RichTextBox Name="txtMessageInfo"  HorizontalAlignment="Left" Height="128" Margin="502,-34,0,0" VerticalAlignment="Top" Width="399">
+                        <FlowDocument>
+                            <Paragraph>
+                                <Run Text=""/>
+                            </Paragraph>
+                        </FlowDocument>
+                    </RichTextBox>
+                </Grid>
+                <Grid Grid.Row="3">
+                    <dxg:GridControl  ItemsSource="{Binding}"  Name="gridMain"  AutoGenerateColumns="None" Margin="0,0"   >
+                        <dxg:GridControl.Columns>
+                            <dxg:GridColumn Width="80"   FieldName="" Header="STT" />
+                            <dxg:GridColumn   Width="120" FieldName="FName" Header="姓名" />
+                            <dxg:GridColumn   Width="120" FieldName="FBirthDay" Header="生日" />
+                            <dxg:GridColumn   Width="120" FieldName="FSex" Header="性别" />
+                            <dxg:GridColumn   Width="120" FieldName="FBirthNationlityEn" Header="原来国籍" />
+                            <dxg:GridColumn   Width="120" FieldName="FBirthNationlityPresentEn" Header="现在国籍" />
+                            <dxg:GridColumn   Width="120" FieldName="FNameEn" Header="护照号码" />
+                            <dxg:GridColumn   Width="120" FieldName="FProfessionWork" Header="职业" />
+                            <dxg:GridColumn   Width="120" FieldName="FDurationBegin" Header="出境日期" />
+                            <dxg:GridColumn   Width="120" FieldName="FTimes" Header="次数" />
+                        </dxg:GridControl.Columns>
+                        <dxg:GridControl.View>
+                            <dxg:TableView AllowEditing="False"  ShowTotalSummary="True" ShowGroupPanel="False"/>
+                        </dxg:GridControl.View>
+                    </dxg:GridControl>
+
+                </Grid>
+            </Grid>
+        </TabItem>
+    </TabControl>
+
+</UserControl>

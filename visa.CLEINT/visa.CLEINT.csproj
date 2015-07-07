@@ -1,0 +1,694 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{EB250D88-CE8A-493C-B173-69ED224C18F7}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>visa.CLEINT</RootNamespace>
+    <AssemblyName>visa.CLEINT</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>20150329020018860_easyicon_net_64.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <Win32Resource>
+    </Win32Resource>
+  </PropertyGroup>
+  <PropertyGroup />
+  <ItemGroup>
+    <Reference Include="Accessibility">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="AxInterop.RT6700Lib, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\AxInterop.RT6700Lib.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Charts.v13.1.Core, Version=13.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Data.v13.1, Version=13.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Office.v13.1.Core, Version=13.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.PivotGrid.v13.1.Core, Version=13.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Printing.v13.1.Core, Version=13.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.RichEdit.v13.1.Core, Version=13.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Sparkline.v13.1.Core, Version=13.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Utils.v13.1, Version=13.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v13.1.UI, Version=13.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="devexpress.xpf.controls.v13.1, Version=13.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Xpf.Core.v13.1, Version=13.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\DevExpress.Xpf.Core.v13.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Xpf.Core.v13.1.resources, Version=13.1.0.0, Culture=de, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\DevExpress.Xpf.Core.v13.1.resources.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Xpf.Docking.v13.1, Version=13.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="devexpress.xpf.grid.v13.1, Version=13.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Xpf.Grid.v13.1.Core, Version=13.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Xpf.Layout.v13.1.Core, Version=13.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\DevExpress.Xpf.Layout.v13.1.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="devexpress.xpf.layoutcontrol.v13.1, Version=13.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Xpf.Mvvm.v13.1, Version=13.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Xpf.Printing.v13.1, Version=13.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="devexpress.xpf.reportdesigner.v13.1, Version=13.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="devexpress.xpf.ribbon.v13.1, Version=13.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="devexpress.xpf.richedit.v13.1, Version=13.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Xpf.Themes.Office2010Blue.v13.1, Version=13.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\DevExpress.Xpf.Themes.Office2010Blue.v13.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Xpo.v13.1, Version=13.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraCharts.v13.1, Version=13.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraEditors.v13.1, Version=13.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraPrinting.v13.1, Version=13.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraReports.v13.1, Version=13.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraReports.v13.1.Extensions, Version=13.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework">
+      <HintPath>..\..\visa\visa\packages\EntityFramework.6.1.1\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\..\visa\visa\packages\EntityFramework.6.1.1\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="GetIcao">
+      <HintPath>bin\GetIcao.dll</HintPath>
+    </Reference>
+    <Reference Include="Interop.RT6700Lib, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <HintPath>bin\Interop.RT6700Lib.dll</HintPath>
+    </Reference>
+    <Reference Include="microsoft.office.interop.excel, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>bin\microsoft.office.interop.excel.dll</HintPath>
+    </Reference>
+    <Reference Include="MMMReaderDotNet20, Version=4.1.10.0, Culture=neutral, PublicKeyToken=628dd6318974115c, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\visa.SINGLE\bin\Debug\MMMReaderDotNet20.dll</HintPath>
+    </Reference>
+    <Reference Include="MMMReaderDotNet20QA, Version=4.1.10.0, Culture=neutral, PublicKeyToken=628dd6318974115c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\visa.SINGLE\bin\Debug\MMMReaderDotNet20QA.dll</HintPath>
+    </Reference>
+    <Reference Include="office, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>bin\office.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationUI, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ReachFramework">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Data.Services.Client" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Printing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="UIAutomationProvider">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="UIAutomationTypes">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="WindowsBase">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="PresentationCore">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="PresentationFramework">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="WindowsFormsIntegration">
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="BaseClass.cs" />
+    <Compile Include="ChineseToPinYin.cs" />
+    <Compile Include="Common\CommandTemplateSelector.cs" />
+    <Compile Include="Common\GlyphHelper.cs" />
+    <Compile Include="Common\SimpleCommand.cs" />
+    <Compile Include="Data\PrintSendInfoBatch_SP.cs">
+      <DependentUpon>PrintSendInfoBatch_SP.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Data\PrintSendInfoBatch_SP.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PrintSendInfoBatch_SP.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Data\PrintSendInfo_SP.cs">
+      <DependentUpon>PrintSendInfo_SP.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Data\PrintSendInfo_SP.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PrintSendInfo_SP.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Data\sp_SelectPrintSendInfoBatchByNumber.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>sp_SelectPrintSendInfoBatchByNumber.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Data\sp_SelectTable1ForPrint.cs">
+      <DependentUpon>sp_SelectTable1ForPrint.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Data\sp_SelectTable1ForPrint.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>sp_SelectTable1ForPrint.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Data\sp_SelectTable3ForExcel.cs">
+      <DependentUpon>sp_SelectTable3ForExcel.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Data\sp_SelectTable3ForExcel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>sp_SelectTable3ForExcel.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Data\sp_SelectTbSubmitWithSubmitNo.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>sp_SelectTbSubmitWithSubmitNo.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Excel\ExportC.cs" />
+    <Compile Include="Login.xaml.cs">
+      <DependentUpon>Login.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Log\WriteLog.cs" />
+    <Compile Include="MainContext.cs" />
+    <Compile Include="Model\BarModel.cs" />
+    <Compile Include="Model\ModelBase.cs" />
+    <Compile Include="Model\MyCommand.cs" />
+    <Compile Include="Report\ReportQZ.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\ReportQZ.designer.cs">
+      <DependentUpon>ReportQZ.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\ReportQZ1.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\ReportQZ1.designer.cs">
+      <DependentUpon>ReportQZ1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\ReportQZLoc.cs" />
+    <Compile Include="Report\ReportTable1.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\ReportTable1.Designer.cs">
+      <DependentUpon>ReportTable1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\ReportTable2.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\ReportTable2.designer.cs">
+      <DependentUpon>ReportTable2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\ReportTable4.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\ReportTable4.designer.cs">
+      <DependentUpon>ReportTable4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\ReportTable4Bat.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\ReportTable4Bat.designer.cs">
+      <DependentUpon>ReportTable4Bat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\ReportTable4BatByNumber.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\ReportTable4BatByNumber.designer.cs">
+      <DependentUpon>ReportTable4BatByNumber.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewModel\UserAdminVM.cs" />
+    <Compile Include="ViewModel\ViewModel.cs" />
+    <Compile Include="ViewModel\VisaEditVM.cs" />
+    <Compile Include="View\AuditPrint.xaml.cs">
+      <DependentUpon>AuditPrint.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\AuditReceived.xaml.cs">
+      <DependentUpon>AuditReceived.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\AuditSent.xaml.cs">
+      <DependentUpon>AuditSent.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\BlackList.xaml.cs">
+      <DependentUpon>BlackList.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\ChkUnScan.xaml.cs">
+      <DependentUpon>ChkUnScan.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\DataBackup.xaml.cs">
+      <DependentUpon>DataBackup.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\ListName.xaml.cs">
+      <DependentUpon>ListName.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\ListSum.xaml.cs">
+      <DependentUpon>ListSum.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\ListVisa.xaml.cs">
+      <DependentUpon>ListVisa.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\PortAdmin.xaml.cs">
+      <DependentUpon>PortAdmin.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Report1.xaml.cs">
+      <DependentUpon>Report1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Report2.xaml.cs">
+      <DependentUpon>Report2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Report3.xaml.cs">
+      <DependentUpon>Report3.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Report4.xaml.cs">
+      <DependentUpon>Report4.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Report4Batch.xaml.cs">
+      <DependentUpon>Report4Batch.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\SetBeginQZID.xaml.cs">
+      <DependentUpon>SetBeginQZID.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\SetPrintStyle.xaml.cs">
+      <DependentUpon>SetPrintStyle.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\UserAdmin.xaml.cs">
+      <DependentUpon>UserAdmin.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\VietnamCompany.xaml.cs">
+      <DependentUpon>VietnamCompany.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\VisaEdit.xaml.cs">
+      <DependentUpon>VisaEdit.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\VisaImport.xaml.cs">
+      <DependentUpon>VisaImport.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\VisaNumbers.xaml.cs">
+      <DependentUpon>VisaNumbers.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\VisaSubmit.xaml.cs">
+      <DependentUpon>VisaSubmit.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\AuditUser.xaml.cs">
+      <DependentUpon>AuditUser.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\AuditPosition.xaml.cs">
+      <DependentUpon>AuditPosition.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\CountryAdmin.xaml.cs">
+      <DependentUpon>CountryAdmin.xaml</DependentUpon>
+    </Compile>
+    <Page Include="Login.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="Style\StyleBar.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Style\StyleEdit.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\AuditPrint.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\AuditReceived.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\AuditSent.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\BlackList.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\ChkUnScan.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\DataBackup.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\ListName.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\ListSum.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\ListVisa.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\PortAdmin.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Report1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Report2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Report3.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Report4.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Report4Batch.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\SetBeginQZID.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\SetPrintStyle.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\UserAdmin.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\VietnamCompany.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\VisaEdit.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\VisaImport.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\VisaNumbers.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\VisaSubmit.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\AuditUser.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\AuditPosition.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\CountryAdmin.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\ReportQZ.resx">
+      <DependentUpon>ReportQZ.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\ReportQZ1.resx">
+      <DependentUpon>ReportQZ1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\ReportTable1.resx">
+      <DependentUpon>ReportTable1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\ReportTable2.resx">
+      <DependentUpon>ReportTable2.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\ReportTable4.resx">
+      <DependentUpon>ReportTable4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\ReportTable4Bat.resx">
+      <DependentUpon>ReportTable4Bat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\ReportTable4BatByNumber.resx">
+      <DependentUpon>ReportTable4BatByNumber.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="zh-CN\LocalizationRes.zh-CN.resx" />
+    <EmbeddedResource Include="zh-CN\LocalizationRes.zh-Hans.resx" />
+    <None Include="Data\PrintSendInfoBatch_SP.xsc">
+      <DependentUpon>PrintSendInfoBatch_SP.xsd</DependentUpon>
+    </None>
+    <None Include="Data\PrintSendInfoBatch_SP.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PrintSendInfoBatch_SP.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Data\PrintSendInfoBatch_SP.xss">
+      <DependentUpon>PrintSendInfoBatch_SP.xsd</DependentUpon>
+    </None>
+    <None Include="Data\PrintSendInfo_SP.xsc">
+      <DependentUpon>PrintSendInfo_SP.xsd</DependentUpon>
+    </None>
+    <None Include="Data\PrintSendInfo_SP.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PrintSendInfo_SP.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Data\PrintSendInfo_SP.xss">
+      <DependentUpon>PrintSendInfo_SP.xsd</DependentUpon>
+    </None>
+    <None Include="Data\sp_SelectPrintSendInfoBatchByNumber.xsc">
+      <DependentUpon>sp_SelectPrintSendInfoBatchByNumber.xsd</DependentUpon>
+    </None>
+    <None Include="Data\sp_SelectPrintSendInfoBatchByNumber.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>sp_SelectPrintSendInfoBatchByNumber.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Data\sp_SelectPrintSendInfoBatchByNumber.xss">
+      <DependentUpon>sp_SelectPrintSendInfoBatchByNumber.xsd</DependentUpon>
+    </None>
+    <None Include="Data\sp_SelectTable1ForPrint.xsc">
+      <DependentUpon>sp_SelectTable1ForPrint.xsd</DependentUpon>
+    </None>
+    <None Include="Data\sp_SelectTable1ForPrint.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>sp_SelectTable1ForPrint.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Data\sp_SelectTable1ForPrint.xss">
+      <DependentUpon>sp_SelectTable1ForPrint.xsd</DependentUpon>
+    </None>
+    <None Include="Data\sp_SelectTable3ForExcel.xsc">
+      <DependentUpon>sp_SelectTable3ForExcel.xsd</DependentUpon>
+    </None>
+    <None Include="Data\sp_SelectTable3ForExcel.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>sp_SelectTable3ForExcel.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Data\sp_SelectTable3ForExcel.xss">
+      <DependentUpon>sp_SelectTable3ForExcel.xsd</DependentUpon>
+    </None>
+    <None Include="Data\sp_SelectTbSubmitWithSubmitNo.xsc">
+      <DependentUpon>sp_SelectTbSubmitWithSubmitNo.xsd</DependentUpon>
+    </None>
+    <None Include="Data\sp_SelectTbSubmitWithSubmitNo.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>sp_SelectTbSubmitWithSubmitNo.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Data\sp_SelectTbSubmitWithSubmitNo.xss">
+      <DependentUpon>sp_SelectTbSubmitWithSubmitNo.xsd</DependentUpon>
+    </None>
+    <None Include="Excel\ImportModel.xlsx" />
+    <None Include="Excel\Table3.xlt" />
+    <None Include="Excel\Table32.xlsx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Excel\Table33.xlsx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Excel\Table4.xlt" />
+    <None Include="Excel\Table41.xlt" />
+    <None Include="Properties\DataSources\visa.CLEINT.Data.sp_SelectTable1ForPrint.datasource" />
+    <None Include="Properties\DataSources\visa.MODEL.Customer.datasource" />
+    <None Include="Properties\DataSources\visa.MODEL.sp_SelectTbSubmitWithSubmitNo_Result.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\visa.MODEL\visa.MODEL.csproj">
+      <Project>{5c29ba51-5da9-4e02-8fd1-a89a7c8543d7}</Project>
+      <Name>visa.MODEL</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="20150329020018860_easyicon_net_64.ico" />
+    <Resource Include="Resources\20150329020018860_easyicon_net_64.ico">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\save.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

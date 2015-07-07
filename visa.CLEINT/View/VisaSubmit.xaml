@@ -1,0 +1,81 @@
+﻿<UserControl
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:dxlc="http://schemas.devexpress.com/winfx/2008/xaml/layoutcontrol"
+    xmlns:dxb="http://schemas.devexpress.com/winfx/2008/xaml/bars"
+    xmlns:dxe="http://schemas.devexpress.com/winfx/2008/xaml/editors"
+    xmlns:dxg="http://schemas.devexpress.com/winfx/2008/xaml/grid" x:Class="visa.CLEINT.View.VisaSubmit" 
+             mc:Ignorable="d" 
+             d:DesignHeight="700" d:DesignWidth="800">
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/Style/StyleEdit.xaml" />
+                <ResourceDictionary Source="/Style/StyleBar.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </UserControl.Resources>
+
+    <TabControl x:Name="MainTab" Margin="0,-0,-0,0">
+        <TabItem Header="签证提交">
+
+            <Grid>
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition Height="120."/>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+
+                <dxb:BarManager    BarsSource="{Binding Bars}" BarTemplate="{StaticResource barTemplate}" BarStyle="{StaticResource barStyle}" AllowCustomization="False"   AllowHotCustomization="False" AllowQuickCustomization="False" AllowUIAutomationSupport="False">
+                </dxb:BarManager>
+
+
+                <TextBlock HorizontalAlignment="Left" Margin="23,30,0,0" Grid.Row="1" TextWrapping="Wrap" Text="查询已提交名单" VerticalAlignment="Top"/>
+                <dxe:ComboBoxEdit SelectedIndexChanged="cbSubmitList_SelectedIndexChanged" IsTextEditable="False"  Name="cbSubmitList"   HorizontalAlignment="Left" Margin="149,24,0,0" Grid.Row="1" VerticalAlignment="Top" Width="150"/>
+                <Button Name="btnPrintSubmitNo" Click="btnPrintSubmitNo_Click"  Content="补打已提交名单签证申请表" HorizontalAlignment="Left" Margin="502,24,0,0" Grid.Row="1" VerticalAlignment="Top" Width="179"/>
+                <TextBlock HorizontalAlignment="Left" Margin="23,56,0,0" Grid.Row="1" TextWrapping="Wrap" Text="补打单个已申请签证" VerticalAlignment="Top"/>
+                <dxe:TextEdit Name="txtPrintSingle" KeyUp="txtPrintSingle_KeyUp"  HorizontalAlignment="Left" Margin="149,52,0,0" Grid.Row="1" VerticalAlignment="Top" Width="150"/>
+                <TextBlock HorizontalAlignment="Left" Margin="23,8,0,0" Grid.Row="2" TextWrapping="Wrap" Text="名单号" VerticalAlignment="Top"/>
+                <TextBlock HorizontalAlignment="Left" Margin="286,8,0,0" Grid.Row="2" TextWrapping="Wrap" Text="日期" VerticalAlignment="Top" RenderTransformOrigin="1.193,0.269"/>
+                <dxe:TextEdit IsEnabled="False"  Name="txtSubmitNo"  HorizontalAlignment="Left" Margin="100,5,0,0" Grid.Row="2" VerticalAlignment="Top" Width="150"/>
+                <dxe:TextEdit IsEnabled="False" Name="txtDate"  HorizontalAlignment="Left" Margin="345,5,0,0" Grid.Row="2" VerticalAlignment="Top" Width="150" RenderTransformOrigin="0.53,0.525"/>
+                <dxe:TextEdit IsEnabled="False" Name="txtCompanyName"  HorizontalAlignment="Left" Margin="623,5,0,0" Grid.Row="2" VerticalAlignment="Top" Width="150" RenderTransformOrigin="0.53,0.525"/>
+                <TextBlock HorizontalAlignment="Left" Margin="539,8,0,0" Grid.Row="2" TextWrapping="Wrap" Text="投证单位" VerticalAlignment="Top" RenderTransformOrigin="1.193,0.269"/>
+
+
+
+                <dxg:GridControl Name="gridMain"  AutoGenerateColumns="None" Margin="0,0"  Width="800"  HorizontalAlignment="Left" Grid.Row="3" VerticalAlignment="Top">
+                    <dxg:GridControl.Columns>
+                        <dxg:GridColumn Width="80"   FieldName="STT" Header="STT" />
+                        <dxg:GridColumn   Width="150" FieldName="FName" Header="姓名" />
+                        <dxg:GridColumn   Width="50" FieldName="Times_1S" Header="1S" />
+                        <dxg:GridColumn   Width="50" FieldName="Times_1M" Header="1M" />
+                        <dxg:GridColumn   Width="50" FieldName="Times_3S" Header="3S" />
+                        <dxg:GridColumn   Width="50" FieldName="Times_3M" Header="3M" />
+                        <dxg:GridColumn   Width="50" FieldName="Times_6S" Header="6S" />
+                        <dxg:GridColumn   Width="50" FieldName="Times_6M" Header="6M" />
+                        <dxg:GridColumn   Width="50" FieldName="Times_Others" Header="1Y+" />
+                        <dxg:GridColumn  Width="50" FieldName="Speed_ND" Header="ND" />
+                        <dxg:GridColumn   Width="50" FieldName="Speed_O" Header="O" />
+                        <dxg:GridColumn   Width="50" FieldName="Speed_NA" Header="NA" />
+                    </dxg:GridControl.Columns>
+                    <dxg:GridControl.View>
+                        <dxg:TableView AllowEditing="False"  ShowTotalSummary="True" ShowGroupPanel="False"/>
+                    </dxg:GridControl.View>
+                </dxg:GridControl>
+                <Button x:Name="btnShowAll" Click="btnShowAll_Click"  Content="显示所有历史单号" HorizontalAlignment="Left" Margin="349,23,0,0" VerticalAlignment="Top" Width="138" Grid.Row="1"/>
+                <TextBlock HorizontalAlignment="Left" Margin="23,85,0,0" Grid.Row="1" TextWrapping="Wrap" Text="备注" VerticalAlignment="Top"/>
+                <dxe:TextEdit x:Name="txtSubmitMemo"   HorizontalAlignment="Left" Margin="149,81,0,0" Grid.Row="1" VerticalAlignment="Top" Width="150"/>
+
+
+
+            </Grid>
+
+        </TabItem>
+    </TabControl>
+
+</UserControl>

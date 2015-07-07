@@ -1,0 +1,134 @@
+﻿<UserControl
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+            xmlns:dxg="http://schemas.devexpress.com/winfx/2008/xaml/grid"
+              xmlns:dxb="http://schemas.devexpress.com/winfx/2008/xaml/bars"
+            xmlns:dxe="http://schemas.devexpress.com/winfx/2008/xaml/editors" x:Class="visa.CLEINT.View.AuditReceived" 
+             mc:Ignorable="d" 
+             Height="800" Width="800">
+
+    <UserControl.Resources>
+        <ResourceDictionary>
+
+            <ResourceDictionary.MergedDictionaries>
+                
+                <ResourceDictionary Source="/Style/StyleEdit.xaml" />
+                <ResourceDictionary Source="/Style/StyleBar.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </UserControl.Resources>
+    <TabControl x:Name="MainTab" Margin="0,-0,-0,0">
+        <TabItem Header="提交报审名单">
+
+            <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="80"/>
+            <RowDefinition Height="100 "/>
+            <RowDefinition />
+        </Grid.RowDefinitions>
+                <dxb:BarManager Name="MainBar"  Grid.Row="0"   BarsSource="{Binding Bars}" BarTemplate="{StaticResource barTemplate}" BarStyle="{StaticResource barStyle}" AllowCustomization="False"   AllowHotCustomization="False" AllowQuickCustomization="False" AllowUIAutomationSupport="False">
+        </dxb:BarManager>
+
+        <Grid Grid.Row="1" >
+
+            <TextBlock HorizontalAlignment="Left" Margin="49,38,0,0" TextWrapping="Wrap" Text="等待审核名单列表:" VerticalAlignment="Top"/>
+
+                    <dxe:ComboBoxEdit Name="cbSentVisa" SelectedIndexChanged="cbSentVisa_SelectedIndexChanged"  HorizontalAlignment="Left" Margin="184,35,0,0" VerticalAlignment="Top" Width="150"/>
+            <TextBlock HorizontalAlignment="Left" Margin="386,41,0,0" TextWrapping="Wrap" Text="调出历史名单:" VerticalAlignment="Top"/>
+            <dxe:ComboBoxEdit Name="cbHistorySendList" SelectedIndexChanged="cbHistorySendList_SelectedIndexChanged"  HorizontalAlignment="Left" Margin="479,35,0,0" VerticalAlignment="Top" Width="150"/>
+                </Grid>
+        <Grid Grid.Row="2">
+                    <TextBlock HorizontalAlignment="Left" Margin="49,20,0,0" TextWrapping="Wrap" Text="名单号:" />
+                    <TextBlock HorizontalAlignment="Left" Margin="49,60,0,0" TextWrapping="Wrap" Text="日期:" VerticalAlignment="Top"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="315,60,0,0" TextWrapping="Wrap" Text="DSN:" VerticalAlignment="Top"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="563,60,0,0" TextWrapping="Wrap" Text="公司:" VerticalAlignment="Top"/>
+
+                    <dxe:TextEdit IsEnabled="False" Name="txtSendNo"  HorizontalAlignment="Left" Margin="117,20,0,0" VerticalAlignment="Top" Width="150" RenderTransformOrigin="0.873,0.864"/>
+                    <dxe:TextEdit IsEnabled="False" Name="txtDate"  HorizontalAlignment="Left" Margin="117,60,0,0" VerticalAlignment="Top" Width="150"/>
+                    <dxe:TextEdit IsEnabled="False" Name="txtDSN"  HorizontalAlignment="Left" Margin="370,60,0,0" VerticalAlignment="Top" Width="150"/>
+                    <dxe:TextEdit IsEnabled="False" Name="txtCompany"  HorizontalAlignment="Left" Margin="621,60,0,0" VerticalAlignment="Top" Width="150"/>
+                    <GridSplitter HorizontalAlignment="Left" Height="100" Margin="288,0,0,0" VerticalAlignment="Top" Width="5"/>
+                </Grid>
+        <Grid Grid.Row="3">
+                    <dxg:GridControl   Name="gridMain" ItemsSource="{Binding}"  AutoGenerateColumns="None" Margin="0,0"  HorizontalAlignment="Left" VerticalAlignment="Top">
+                        <dxg:GridControl.Columns>
+                            <dxg:GridColumn Width="40"    Header="选择" >
+                                    <dxg:GridColumn.CellTemplate>
+                                        <DataTemplate>
+                                        <dxe:CheckEdit HorizontalAlignment="Center" x:Name="checkName"   IsChecked="{Binding  RowData.Row.SelectChk}"/>
+                                        </DataTemplate>
+                                    </dxg:GridColumn.CellTemplate>
+                            </dxg:GridColumn>
+                            <dxg:GridColumn   Width="120" FieldName="Name" Header="姓名" />
+                            <dxg:GridColumn   Width="120" FieldName="BirthDay" Header="生日" />
+                            <dxg:GridColumn   Width="120" FieldName="Sex" Header="性别" />
+                            <dxg:GridColumn   Width="120" FieldName="FBirthNationlityEn" Header="原来国籍" />
+                            <dxg:GridColumn   Width="120" FieldName="FBirthNationlityPresentEn" Header="现在国籍" />
+                            <dxg:GridColumn   Width="120" FieldName="PID" Header="护照号码" />
+                            <dxg:GridColumn   Width="120" FieldName="Work" Header="职业" />
+                            <dxg:GridColumn   FieldName="CQJDate" Header="出境日期" />
+                            <dxg:GridColumn   Width="120" FieldName="FTimes" Header="次数" />
+                        </dxg:GridControl.Columns>
+                        <dxg:GridControl.View>
+                            <dxg:TableView  Name="viewMain"  ShowTotalSummary="True" ShowGroupPanel="False">
+                                <dxg:TableView.RowStyle>
+                                <Style 
+            TargetType="{x:Type dxg:GridRowContent}">
+                                    <Style.Triggers>
+                                        <DataTrigger Binding="{Binding Path=Row.iType}" Value="1">
+                                            <Setter Property="Foreground" Value="Black" /></DataTrigger>
+                                            <DataTrigger Binding="{Binding Path=Row.iType}" Value="2">
+                                                <Setter Property="Foreground" Value="#666698" />
+                                            </DataTrigger>
+                                            <DataTrigger Binding="{Binding Path=Row.iType}" Value="3">
+                                                <Setter Property="Foreground" Value="Green" />
+                                            </DataTrigger>
+                                            <DataTrigger Binding="{Binding Path=Row.iType}" Value="4">
+                                                <Setter Property="Foreground" Value="Black" />
+                                            </DataTrigger>
+                                            <DataTrigger Binding="{Binding Path=Row.iType}" Value="5">
+                                                <Setter Property="Foreground" Value="Black" />
+                                            </DataTrigger>
+                                            <DataTrigger Binding="{Binding Path=Row.iType}" Value="6">
+                                                <Setter Property="Foreground" Value="Blue" />
+                                            </DataTrigger>
+                                            <DataTrigger Binding="{Binding Path=Row.iType}" Value="7">
+                                                <Setter Property="Foreground" Value="Black" />
+                                            </DataTrigger>
+                                            <DataTrigger Binding="{Binding Path=Row.iType}" Value="8">
+                                                <Setter Property="Foreground" Value="Maroon" />
+                                            </DataTrigger>
+                                            <DataTrigger Binding="{Binding Path=Row.iType}" Value="9">
+                                                <Setter Property="Foreground" Value="Black" />
+                                            </DataTrigger>
+                                            <DataTrigger Binding="{Binding Path=Row.iType}" Value="10">
+                                                <Setter Property="Foreground" Value="Black" />
+                                            </DataTrigger>
+                                            <DataTrigger Binding="{Binding Path=Row.iType}" Value="11">
+                                                <Setter Property="Foreground" Value="Red" />
+                                            </DataTrigger>
+                                            <DataTrigger Binding="{Binding Path=Row.iType}" Value="12">
+                                                <Setter Property="Foreground" Value="Black" />
+                                            </DataTrigger>
+                                            <DataTrigger Binding="{Binding Path=Row.iType}" Value="13">
+                                                <Setter Property="Foreground" Value="Black" />
+                                            </DataTrigger>
+                                            <DataTrigger Binding="{Binding Path=Row.iType}" Value="14">
+                                                <Setter Property="Foreground" Value="Black" />
+                                            </DataTrigger>
+                                        </Style.Triggers>
+                                </Style>
+                                </dxg:TableView.RowStyle>
+                            </dxg:TableView>
+                        </dxg:GridControl.View>
+                    </dxg:GridControl>
+
+                </Grid>
+    </Grid>
+        </TabItem>
+    </TabControl>
+
+</UserControl>

@@ -1,0 +1,1773 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="visaModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Customer">
+          <Key>
+            <PropertyRef Name="FID" />
+          </Key>
+          <Property Name="FID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="FAutoID" Type="varchar" MaxLength="40" />
+          <Property Name="FName" Type="varchar" MaxLength="40" />
+          <Property Name="FNameEn" Type="varchar" MaxLength="100" />
+          <Property Name="FBirthDay" Type="datetime" />
+          <Property Name="FSex" Type="nvarchar" MaxLength="1" />
+          <Property Name="FBirthPlace" Type="varchar" MaxLength="200" />
+          <Property Name="FBirthPlaceEn" Type="varchar" MaxLength="400" />
+          <Property Name="FBirthNationlity" Type="varchar" MaxLength="50" />
+          <Property Name="FBirthNationlityEn" Type="varchar" MaxLength="100" />
+          <Property Name="FBirthNationlityPresent" Type="varchar" MaxLength="50" />
+          <Property Name="FBirthNationlityPresentEn" Type="varchar" MaxLength="100" />
+          <Property Name="FPassportNo" Type="varchar" MaxLength="50" />
+          <Property Name="FPassportType" Type="varchar" MaxLength="50" />
+          <Property Name="FPassportMake" Type="varchar" MaxLength="100" />
+          <Property Name="FPassportMakeDate" Type="datetime" />
+          <Property Name="FPassportValidDate" Type="datetime" />
+          <Property Name="FProfessionWork" Type="varchar" MaxLength="50" />
+          <Property Name="FProfessionCompany" Type="varchar" MaxLength="200" />
+          <Property Name="FProfessionTele" Type="varchar" MaxLength="50" />
+          <Property Name="FAddressNow" Type="varchar" MaxLength="200" />
+          <Property Name="FAddressTele" Type="varchar" MaxLength="50" />
+          <Property Name="FChildrenName1" Type="varchar" MaxLength="40" />
+          <Property Name="FChildrenBirthDay1" Type="datetime" />
+          <Property Name="FChildrenBirthLink1" Type="varchar" MaxLength="20" />
+          <Property Name="FChildrenName2" Type="varchar" MaxLength="40" />
+          <Property Name="FChildrenBirthDay2" Type="datetime" />
+          <Property Name="FChildrenBirthLink2" Type="varchar" MaxLength="20" />
+          <Property Name="FChildrenName3" Type="varchar" MaxLength="40" />
+          <Property Name="FChildrenBirthDay3" Type="datetime" />
+          <Property Name="FChildrenBirthLink3" Type="varchar" MaxLength="20" />
+          <Property Name="FPurpose" Type="varchar" MaxLength="50" />
+          <Property Name="FVisitCompany" Type="varchar" MaxLength="200" />
+          <Property Name="FVisitnamName" Type="varchar" MaxLength="40" />
+          <Property Name="FVisitnamAddress" Type="varchar" MaxLength="200" />
+          <Property Name="FDurationBegin" Type="datetime" />
+          <Property Name="FDurationEnd" Type="datetime" />
+          <Property Name="FDurationDay" Type="int" />
+          <Property Name="FTimes" Type="int" />
+          <Property Name="FSpeedType" Type="int" />
+          <Property Name="FSysMemo" Type="varchar" MaxLength="1000" />
+          <Property Name="FCreateDate" Type="datetime" />
+          <Property Name="FCreateCompany" Type="varchar" MaxLength="200" />
+          <Property Name="FCreateUser" Type="int" />
+          <Property Name="FSysPut" Type="bit" />
+          <Property Name="FSysPutDate" Type="datetime" />
+          <Property Name="FSysPutUser" Type="int" />
+          <Property Name="FSysSend" Type="bit" />
+          <Property Name="FSysSendDate" Type="datetime" />
+          <Property Name="FSysSendUser" Type="int" />
+          <Property Name="FSysPrint" Type="bit" />
+          <Property Name="FSysPrintDate" Type="datetime" />
+          <Property Name="FSysPrintUser" Type="int" />
+          <Property Name="FSysChk" Type="bit" />
+          <Property Name="FSysChkDate" Type="datetime" />
+          <Property Name="FSysChkUser" Type="int" />
+          <Property Name="FSysSure" Type="bit" />
+          <Property Name="FSysSureDate" Type="datetime" />
+          <Property Name="FSysSureUser" Type="int" />
+          <Property Name="FModifyDate" Type="datetime" />
+          <Property Name="FModifyUser" Type="int" />
+          <Property Name="FStopSend" Type="bit" />
+          <Property Name="FYNCom" Type="varchar" MaxLength="20" />
+          <Property Name="FsysZF" Type="bit" />
+          <Property Name="FQZID" Type="varchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="CustomerT">
+          <Key>
+            <PropertyRef Name="FID" />
+          </Key>
+          <Property Name="FID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="FName" Type="varchar" MaxLength="40" />
+          <Property Name="FNameEn" Type="varchar" MaxLength="100" />
+          <Property Name="FBirthDay" Type="datetime" />
+          <Property Name="FSex" Type="nvarchar" MaxLength="1" />
+          <Property Name="FBirthPlace" Type="varchar" MaxLength="200" />
+          <Property Name="FBirthPlaceEn" Type="varchar" MaxLength="400" />
+          <Property Name="FBirthNationlity" Type="varchar" MaxLength="50" />
+          <Property Name="FBirthNationlityEn" Type="varchar" MaxLength="100" />
+          <Property Name="FBirthNationlityPresent" Type="varchar" MaxLength="50" />
+          <Property Name="FBirthNationlityPresentEn" Type="varchar" MaxLength="100" />
+          <Property Name="FPassportNo" Type="varchar" MaxLength="50" />
+          <Property Name="FPassportType" Type="varchar" MaxLength="50" />
+          <Property Name="FPassportMake" Type="varchar" MaxLength="100" />
+          <Property Name="FPassportMakeDate" Type="datetime" />
+          <Property Name="FPassportValidDate" Type="datetime" />
+          <Property Name="FProfessionWork" Type="varchar" MaxLength="50" />
+          <Property Name="FProfessionCompany" Type="varchar" MaxLength="200" />
+          <Property Name="FProfessionTele" Type="varchar" MaxLength="50" />
+          <Property Name="FAddressNow" Type="varchar" MaxLength="200" />
+          <Property Name="FAddressTele" Type="varchar" MaxLength="50" />
+          <Property Name="FPurpose" Type="varchar" MaxLength="50" />
+          <Property Name="FSysMemo" Type="varchar" MaxLength="1000" />
+          <Property Name="FCreateDate" Type="datetime" />
+          <Property Name="FCreateCompany" Type="varchar" MaxLength="200" />
+          <Property Name="FCreateUser" Type="int" />
+          <Property Name="FModifyDate" Type="datetime" />
+          <Property Name="FModifyUser" Type="int" />
+        </EntityType>
+        <EntityType Name="IDC">
+          <Key>
+            <PropertyRef Name="FID" />
+          </Key>
+          <Property Name="FID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="FBM" Type="varchar" MaxLength="6" />
+          <Property Name="FDQ" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="QZKC">
+          <Key>
+            <PropertyRef Name="FQZID" />
+          </Key>
+          <Property Name="FQZID" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="FIsUse" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="SendDtl">
+          <Key>
+            <PropertyRef Name="FID" />
+          </Key>
+          <Property Name="FID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="FCustomerID" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="FQZID" Type="varchar" MaxLength="100" />
+          <Property Name="FSysChk" Type="bit" />
+          <Property Name="FSysChkUser" Type="int" />
+          <Property Name="FSysChkDate" Type="varchar" MaxLength="50" />
+          <Property Name="FPrintCount" Type="int" />
+          <Property Name="Fidorder" Type="int" />
+          <Property Name="FCreateDate" Type="datetime" />
+          <Property Name="FCreateUser" Type="int" />
+          <Property Name="FModifyDate" Type="datetime" />
+          <Property Name="FModifyUser" Type="int" />
+          <Property Name="FStatus" Type="bit" />
+        </EntityType>
+        <EntityType Name="SendInfo">
+          <Key>
+            <PropertyRef Name="FID" />
+          </Key>
+          <Property Name="FID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="FSendNo" Type="varchar" MaxLength="50" />
+          <Property Name="FCustomerID" Type="int" Nullable="false" />
+          <Property Name="FCDate" Type="varchar" MaxLength="20" />
+          <Property Name="FQZID" Type="varchar" MaxLength="100" />
+          <Property Name="FSendDate" Type="datetime" />
+          <Property Name="FDSN" Type="varchar" MaxLength="100" />
+          <Property Name="FCreateCompany" Type="varchar" MaxLength="50" />
+          <Property Name="FVietnamCompany" Type="varchar" MaxLength="10" />
+          <Property Name="FSysMemo" Type="varchar" MaxLength="1000" />
+          <Property Name="FPrintCount" Type="int" />
+          <Property Name="FIDOrder" Type="int" />
+          <Property Name="FVID" Type="varchar" MaxLength="200" />
+          <Property Name="FSysSend" Type="bit" />
+          <Property Name="FSysSendDate" Type="datetime" />
+          <Property Name="FSysSendUser" Type="int" />
+          <Property Name="FSysChk" Type="bit" />
+          <Property Name="FSysChkDate" Type="datetime" />
+          <Property Name="FSysChkUser" Type="int" />
+          <Property Name="FSysPrint" Type="bit" />
+          <Property Name="FSysPrintNum" Type="int" />
+          <Property Name="FSysPrintDate" Type="datetime" />
+          <Property Name="FSysPrintUser" Type="int" />
+          <Property Name="FOrder" Type="int" />
+          <Property Name="FCreateDate" Type="datetime" />
+          <Property Name="FCreateUser" Type="int" />
+          <Property Name="FModifyDate" Type="datetime" />
+          <Property Name="FModifyUser" Type="int" />
+          <Property Name="FStatus" Type="bit" />
+        </EntityType>
+        <EntityType Name="TB_AuditPosition">
+          <Key>
+            <PropertyRef Name="FID" />
+          </Key>
+          <Property Name="FID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="FName" Type="nvarchar" MaxLength="50" />
+          <Property Name="FOrder" Type="int" />
+          <Property Name="FCreateDate" Type="datetime" />
+          <Property Name="FCreateUser" Type="int" />
+          <Property Name="FModifyDate" Type="datetime" />
+          <Property Name="FModifyUser" Type="int" />
+          <Property Name="FStatus" Type="bit" />
+        </EntityType>
+        <EntityType Name="TB_AuditUser">
+          <Key>
+            <PropertyRef Name="FID" />
+          </Key>
+          <Property Name="FID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="FName" Type="nvarchar" MaxLength="50" />
+          <Property Name="FOrder" Type="int" />
+          <Property Name="FCreateDate" Type="datetime" />
+          <Property Name="FCreateUser" Type="int" />
+          <Property Name="FModifyDate" Type="datetime" />
+          <Property Name="FModifyUser" Type="int" />
+          <Property Name="FStatus" Type="bit" />
+        </EntityType>
+        <EntityType Name="TB_Menu">
+          <Key>
+            <PropertyRef Name="FID" />
+          </Key>
+          <Property Name="FID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="FName" Type="nvarchar" MaxLength="50" />
+          <Property Name="FOrder" Type="int" />
+          <Property Name="FType" Type="int" />
+          <Property Name="FParent" Type="int" />
+          <Property Name="FNavTo" Type="nvarchar" MaxLength="50" />
+          <Property Name="FCreateDate" Type="datetime" />
+          <Property Name="FCreateUser" Type="int" />
+          <Property Name="FModifyDate" Type="datetime" />
+          <Property Name="FModifyUser" Type="int" />
+          <Property Name="FStatus" Type="bit" />
+        </EntityType>
+        <EntityType Name="TB_Position">
+          <Key>
+            <PropertyRef Name="FID" />
+          </Key>
+          <Property Name="FID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="FGroupID" Type="int" />
+          <Property Name="FName" Type="varchar" MaxLength="50" />
+          <Property Name="FX" Type="int" />
+          <Property Name="FY" Type="int" />
+          <Property Name="FCreateDate" Type="datetime" />
+          <Property Name="FCreateUser" Type="int" />
+          <Property Name="FModifyDate" Type="datetime" />
+          <Property Name="FModifyUser" Type="int" />
+          <Property Name="FStatus" Type="bit" />
+        </EntityType>
+        <EntityType Name="TB_TableSubmit">
+          <Key>
+            <PropertyRef Name="FID" />
+          </Key>
+          <Property Name="FID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="FSubmitNo" Type="nvarchar" MaxLength="20" />
+          <Property Name="FAutoID" Type="nvarchar" MaxLength="100" />
+          <Property Name="FCDate" Type="nvarchar" MaxLength="20" />
+          <Property Name="FCompany" Type="nvarchar" MaxLength="100" />
+          <Property Name="FCreateDate" Type="datetime" />
+          <Property Name="FCreateUser" Type="int" />
+          <Property Name="FModifyDate" Type="datetime" />
+          <Property Name="FModifyUser" Type="int" />
+          <Property Name="FStatus" Type="bit" />
+          <Property Name="FSysMemo" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="TB_UserRights">
+          <Key>
+            <PropertyRef Name="FID" />
+          </Key>
+          <Property Name="FID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="FUserID" Type="int" />
+          <Property Name="FMenuID" Type="int" />
+          <Property Name="FCreateDate" Type="datetime" />
+          <Property Name="FCreateUser" Type="int" />
+          <Property Name="FModifyDate" Type="datetime" />
+          <Property Name="FModifyUser" Type="int" />
+          <Property Name="FStatus" Type="bit" />
+        </EntityType>
+        <EntityType Name="TB_VietnamCompany">
+          <Key>
+            <PropertyRef Name="FID" />
+          </Key>
+          <Property Name="FID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="FFullName" Type="nvarchar" MaxLength="100" />
+          <Property Name="FShortName" Type="nvarchar" MaxLength="50" />
+          <Property Name="FOrder" Type="int" />
+          <Property Name="FCreateDate" Type="datetime" />
+          <Property Name="FCreateUser" Type="int" />
+          <Property Name="FModifyDate" Type="datetime" />
+          <Property Name="FModifyUser" Type="int" />
+          <Property Name="FStatus" Type="bit" />
+        </EntityType>
+        <EntityType Name="TCheck">
+          <Key>
+            <PropertyRef Name="FType" />
+            <PropertyRef Name="FSourceFieldName" />
+            <PropertyRef Name="FDistFieldName" />
+          </Key>
+          <Property Name="FType" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="FSourceFieldName" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="FDistFieldName" Type="varchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="TCountry">
+          <Key>
+            <PropertyRef Name="FID" />
+          </Key>
+          <Property Name="FID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="FCountry" Type="varchar" MaxLength="200" />
+          <Property Name="FCountryEn" Type="varchar" MaxLength="200" />
+          <Property Name="Fcountryshort" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="TPara">
+          <Key>
+            <PropertyRef Name="FParaID" />
+          </Key>
+          <Property Name="FParaID" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="FParaValue" Type="varchar" MaxLength="200" />
+        </EntityType>
+        <EntityType Name="User">
+          <Key>
+            <PropertyRef Name="FID" />
+          </Key>
+          <Property Name="FID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="FUserID" Type="varchar" MaxLength="8" />
+          <Property Name="FUserName" Type="varchar" MaxLength="20" />
+          <Property Name="FPassword" Type="varchar" MaxLength="20" />
+          <Property Name="FIsDelete" Type="bit" />
+          <Property Name="FCompanyName" Type="varchar" MaxLength="200" />
+          <Property Name="FIsClient" Type="bit" />
+          <Property Name="FWorkCompanyName" Type="varchar" MaxLength="200" />
+          <Property Name="FPhoneNo" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="UserRight">
+          <Key>
+            <PropertyRef Name="FID" />
+            <PropertyRef Name="FRightID" />
+          </Key>
+          <Property Name="FID" Type="int" Nullable="false" />
+          <Property Name="FRightID" Type="int" Nullable="false" />
+        </EntityType>
+        <!--生成过程中发现错误:
+警告 6002: 表/视图“visa.dbo.v_Report4”未定义主键。已推断出该键，并将定义创建为只读的表/视图。-->
+        <EntityType Name="v_Report4">
+          <Key>
+            <PropertyRef Name="FCustomerID" />
+          </Key>
+          <Property Name="TT" Type="int" />
+          <Property Name="FNameEn" Type="varchar" MaxLength="100" />
+          <Property Name="FBirthDay" Type="datetime" />
+          <Property Name="FQZID" Type="varchar" MaxLength="100" />
+          <Property Name="FPassportNo" Type="varchar" MaxLength="50" />
+          <Property Name="CQJDate" Type="varchar" MaxLength="103" />
+          <Property Name="FCreateCompany" Type="varchar" MaxLength="200" />
+          <Property Name="FSendNo" Type="varchar" MaxLength="50" />
+          <Property Name="FQZIDS" Type="varchar" MaxLength="100" />
+          <Property Name="FCustomerID" Type="int" Nullable="false" />
+          <Property Name="FBirthNationlityPresentEn" Type="varchar" MaxLength="100" />
+        </EntityType>
+        <Function Name="Fn_GetCustomerAutoID" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="varchar">
+          <Parameter Name="DurationDay" Type="int" Mode="In" />
+          <Parameter Name="Times" Type="int" Mode="In" />
+          <Parameter Name="Today" Type="datetime" Mode="In" />
+        </Function>
+        <Function Name="sp_Customer_Select_ByDate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="begin" Type="datetime" Mode="In" />
+          <Parameter Name="end" Type="datetime" Mode="In" />
+        </Function>
+        <Function Name="sp_SelectPrintSendInfo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="SendNO" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="sp_SelectPrintSendInfoBatch" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="FromDate" Type="datetime" Mode="In" />
+          <Parameter Name="EndDate" Type="datetime" Mode="In" />
+        </Function>
+        <Function Name="sp_SelectPrintSendInfoBatchByNumber" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Letter" Type="nvarchar" Mode="In" />
+          <Parameter Name="FromNum" Type="int" Mode="In" />
+          <Parameter Name="ToNum" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_SelectTable1ForListName" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="FromDate" Type="datetime" Mode="In" />
+          <Parameter Name="EndDate" Type="datetime" Mode="In" />
+        </Function>
+        <Function Name="sp_SelectTable1ForPrint" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ID" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="sp_SelectTable3ForAdd" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="FAutoID" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="sp_SelectTable3ForExcel" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ID" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="sp_SelectTbSubmit" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="CompanyName" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="sp_SelectTbSubmitWithSubmitNo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="CompanyName" Type="varchar" Mode="In" />
+          <Parameter Name="SubmitNo" Type="varchar" Mode="In" />
+        </Function>
+        <EntityContainer Name="visaModelStoreContainer">
+          <EntitySet Name="Customer" EntityType="Self.Customer" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="CustomerT" EntityType="Self.CustomerT" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="IDC" EntityType="Self.IDC" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="QZKC" EntityType="Self.QZKC" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SendDtl" EntityType="Self.SendDtl" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SendInfo" EntityType="Self.SendInfo" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TB_AuditPosition" EntityType="Self.TB_AuditPosition" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TB_AuditUser" EntityType="Self.TB_AuditUser" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TB_Menu" EntityType="Self.TB_Menu" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TB_Position" EntityType="Self.TB_Position" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TB_TableSubmit" EntityType="Self.TB_TableSubmit" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TB_UserRights" EntityType="Self.TB_UserRights" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TB_VietnamCompany" EntityType="Self.TB_VietnamCompany" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TCheck" EntityType="Self.TCheck" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TCountry" EntityType="Self.TCountry" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TPara" EntityType="Self.TPara" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="User" EntityType="Self.User" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="UserRight" EntityType="Self.UserRight" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="v_Report4" EntityType="Self.v_Report4" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [v_Report4].[TT] AS [TT], 
+    [v_Report4].[FNameEn] AS [FNameEn], 
+    [v_Report4].[FBirthDay] AS [FBirthDay], 
+    [v_Report4].[FQZID] AS [FQZID], 
+    [v_Report4].[FPassportNo] AS [FPassportNo], 
+    [v_Report4].[CQJDate] AS [CQJDate], 
+    [v_Report4].[FCreateCompany] AS [FCreateCompany], 
+    [v_Report4].[FSendNo] AS [FSendNo], 
+    [v_Report4].[FQZIDS] AS [FQZIDS], 
+    [v_Report4].[FCustomerID] AS [FCustomerID], 
+    [v_Report4].[FBirthNationlityPresentEn] AS [FBirthNationlityPresentEn]
+    FROM [dbo].[v_Report4] AS [v_Report4]</DefiningQuery>
+          </EntitySet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="visaModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="visaEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="IDC" EntityType="visaModel.IDC" />
+          <EntitySet Name="TB_Menu" EntityType="visaModel.TB_Menu" />
+          <EntitySet Name="TCheck" EntityType="visaModel.TCheck" />
+          <EntitySet Name="TCountry" EntityType="visaModel.TCountry" />
+          <EntitySet Name="TPara" EntityType="visaModel.TPara" />
+          <EntitySet Name="User" EntityType="visaModel.User" />
+          <EntitySet Name="UserRight" EntityType="visaModel.UserRight" />
+          <EntitySet Name="TB_VietnamCompany" EntityType="visaModel.TB_VietnamCompany" />
+          <EntitySet Name="SendDtl" EntityType="visaModel.SendDtl" />
+          <EntitySet Name="v_Report4" EntityType="visaModel.v_Report4" />
+          <EntitySet Name="TB_UserRights" EntityType="visaModel.TB_UserRights" />
+          <EntitySet Name="Customer" EntityType="visaModel.Customer" />
+          <EntitySet Name="TB_Position" EntityType="visaModel.TB_Position" />
+          <EntitySet Name="SendInfo" EntityType="visaModel.SendInfo" />
+          <EntitySet Name="CustomerT" EntityType="visaModel.CustomerT" />
+          <EntitySet Name="TB_AuditPosition" EntityType="visaModel.TB_AuditPosition" />
+          <EntitySet Name="TB_AuditUser" EntityType="visaModel.TB_AuditUser" />
+          <EntitySet Name="QZKC" EntityType="visaModel.QZKC" />
+          <FunctionImport Name="sp_SelectTable1ForPrint">
+          <Parameter Name="ID" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="sp_SendDtl1_Select" ReturnType="Collection(visaModel.sp_SendDtl1_Select_Result)" />
+          <FunctionImport Name="sp_Customer_Select_ByDate" ReturnType="Collection(visaModel.sp_Customer_Select_ByDate_Result)">
+            <Parameter Name="begin" Mode="In" Type="DateTime" />
+            <Parameter Name="end" Mode="In" Type="DateTime" />
+          </FunctionImport>
+          <FunctionImport Name="sp_SelectTbSubmit" ReturnType="Collection(visaModel.sp_SelectTbSubmit_Result)">
+          <Parameter Name="CompanyName" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="sp_SelectPrintSendInfoBatch" ReturnType="Collection(visaModel.sp_SelectPrintSendInfoBatch_Result)">
+            <Parameter Name="FromDate" Mode="In" Type="DateTime" />
+            <Parameter Name="EndDate" Mode="In" Type="DateTime" />
+          </FunctionImport>
+          <FunctionImport Name="sp_SelectTable1ForListName" ReturnType="Collection(visaModel.sp_SelectTable1ForListName_Result)">
+            <Parameter Name="FromDate" Mode="In" Type="DateTime" />
+            <Parameter Name="EndDate" Mode="In" Type="DateTime" />
+          </FunctionImport>
+          <FunctionImport Name="sp_SelectPrintSendInfo" ReturnType="Collection(visaModel.sp_SelectPrintSendInfo_Result)">
+          <Parameter Name="SendNO" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="sp_SelectTable3ForAdd" ReturnType="Collection(visaModel.sp_SelectTable3ForAdd_Result)">
+          <Parameter Name="FAutoID" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="sp_SelectTable3ForExcel" ReturnType="Collection(visaModel.sp_SelectTable3ForExcel_Result)">
+          <Parameter Name="ID" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="sp_SelectPrintSendInfoBatchByNumber" ReturnType="Collection(visaModel.sp_SelectPrintSendInfoBatchByNumber_Result)">
+            <Parameter Name="Letter" Mode="In" Type="String" />
+            <Parameter Name="FromNum" Mode="In" Type="Int32" />
+            <Parameter Name="ToNum" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <EntitySet Name="TB_TableSubmit" EntityType="visaModel.TB_TableSubmit" />
+          <FunctionImport Name="sp_SelectTbSubmitWithSubmitNo" ReturnType="Collection(visaModel.sp_SelectTbSubmitWithSubmitNo_Result)">
+            <Parameter Name="CompanyName" Mode="In" Type="String" />
+            <Parameter Name="SubmitNo" Mode="In" Type="String" />
+          </FunctionImport>
+        </EntityContainer>
+        <EntityType Name="IDC">
+          <Key>
+            <PropertyRef Name="FID" />
+          </Key>
+          <Property Name="FID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FBM" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+          <Property Name="FDQ" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="TB_Menu">
+          <Key>
+            <PropertyRef Name="FID" />
+          </Key>
+          <Property Name="FID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="FOrder" Type="Int32" />
+          <Property Name="FType" Type="Int32" />
+          <Property Name="FParent" Type="Int32" />
+          <Property Name="FNavTo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="FCreateDate" Type="DateTime" Precision="3" />
+          <Property Name="FCreateUser" Type="Int32" />
+          <Property Name="FModifyDate" Type="DateTime" Precision="3" />
+          <Property Name="FModifyUser" Type="Int32" />
+          <Property Name="FStatus" Type="Boolean" />
+        </EntityType>
+        <EntityType Name="TCheck">
+          <Key>
+            <PropertyRef Name="FType" />
+            <PropertyRef Name="FSourceFieldName" />
+            <PropertyRef Name="FDistFieldName" />
+          </Key>
+          <Property Name="FType" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FSourceFieldName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="FDistFieldName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="TCountry">
+          <Key>
+            <PropertyRef Name="FID" />
+          </Key>
+          <Property Name="FID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FCountry" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="FCountryEn" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="Fcountryshort" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="TPara">
+          <Key>
+            <PropertyRef Name="FParaID" />
+          </Key>
+          <Property Name="FParaID" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="FParaValue" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="User">
+          <Key>
+            <PropertyRef Name="FID" />
+          </Key>
+          <Property Name="FID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FUserID" Type="String" MaxLength="8" FixedLength="false" Unicode="false" />
+          <Property Name="FUserName" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="FPassword" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="FIsDelete" Type="Boolean" />
+          <Property Name="FCompanyName" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="FIsClient" Type="Boolean" />
+          <Property Name="FWorkCompanyName" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="FPhoneNo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="UserRight">
+          <Key>
+            <PropertyRef Name="FID" />
+            <PropertyRef Name="FRightID" />
+          </Key>
+          <Property Name="FID" Type="Int32" Nullable="false" />
+          <Property Name="FRightID" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="TB_VietnamCompany">
+          <Key>
+            <PropertyRef Name="FID" />
+          </Key>
+          <Property Name="FID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FFullName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="FShortName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="FOrder" Type="Int32" />
+          <Property Name="FCreateDate" Type="DateTime" Precision="3" />
+          <Property Name="FCreateUser" Type="Int32" />
+          <Property Name="FModifyDate" Type="DateTime" Precision="3" />
+          <Property Name="FModifyUser" Type="Int32" />
+          <Property Name="FStatus" Type="Boolean" />
+        </EntityType>
+        <EntityType Name="SendDtl">
+          <Key>
+            <PropertyRef Name="FID" />
+          </Key>
+          <Property Name="FID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FCustomerID" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="FQZID" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="FSysChk" Type="Boolean" />
+          <Property Name="FSysChkUser" Type="Int32" />
+          <Property Name="FSysChkDate" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="FPrintCount" Type="Int32" />
+          <Property Name="Fidorder" Type="Int32" />
+          <Property Name="FCreateDate" Type="DateTime" Precision="3" />
+          <Property Name="FCreateUser" Type="Int32" />
+          <Property Name="FModifyDate" Type="DateTime" Precision="3" />
+          <Property Name="FModifyUser" Type="Int32" />
+          <Property Name="FStatus" Type="Boolean" />
+        </EntityType>
+        <EntityType Name="v_Report4">
+          <Key>
+            <PropertyRef Name="FCustomerID" />
+          </Key>
+          <Property Name="TT" Type="Int32" />
+          <Property Name="FNameEn" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="FBirthDay" Type="DateTime" Precision="3" />
+          <Property Name="FQZID" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="FPassportNo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="CQJDate" Type="String" MaxLength="103" FixedLength="false" Unicode="false" />
+          <Property Name="FCreateCompany" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="FSendNo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="FQZIDS" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="FCustomerID" Type="Int32" Nullable="false" />
+          <Property Name="FBirthNationlityPresentEn" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="TB_UserRights">
+          <Key>
+            <PropertyRef Name="FID" />
+          </Key>
+          <Property Name="FID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FUserID" Type="Int32" />
+          <Property Name="FMenuID" Type="Int32" />
+          <Property Name="FCreateDate" Type="DateTime" Precision="3" />
+          <Property Name="FCreateUser" Type="Int32" />
+          <Property Name="FModifyDate" Type="DateTime" Precision="3" />
+          <Property Name="FModifyUser" Type="Int32" />
+          <Property Name="FStatus" Type="Boolean" />
+        </EntityType>
+        <EntityType Name="Customer">
+          <Key>
+            <PropertyRef Name="FID" />
+          </Key>
+          <Property Name="FID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FAutoID" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+          <Property Name="FName" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+          <Property Name="FNameEn" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="FBirthDay" Type="DateTime" Precision="3" />
+          <Property Name="FSex" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+          <Property Name="FBirthPlace" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="FBirthPlaceEn" Type="String" MaxLength="400" FixedLength="false" Unicode="false" />
+          <Property Name="FBirthNationlity" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="FBirthNationlityEn" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="FBirthNationlityPresent" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="FBirthNationlityPresentEn" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="FPassportNo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="FPassportType" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="FPassportMake" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="FPassportMakeDate" Type="DateTime" Precision="3" />
+          <Property Name="FPassportValidDate" Type="DateTime" Precision="3" />
+          <Property Name="FProfessionWork" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="FProfessionCompany" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="FProfessionTele" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="FAddressNow" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="FAddressTele" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="FChildrenName1" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+          <Property Name="FChildrenBirthDay1" Type="DateTime" Precision="3" />
+          <Property Name="FChildrenBirthLink1" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="FChildrenName2" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+          <Property Name="FChildrenBirthDay2" Type="DateTime" Precision="3" />
+          <Property Name="FChildrenBirthLink2" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="FChildrenName3" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+          <Property Name="FChildrenBirthDay3" Type="DateTime" Precision="3" />
+          <Property Name="FChildrenBirthLink3" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="FPurpose" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="FVisitCompany" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="FVisitnamName" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+          <Property Name="FVisitnamAddress" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="FDurationBegin" Type="DateTime" Precision="3" />
+          <Property Name="FDurationEnd" Type="DateTime" Precision="3" />
+          <Property Name="FDurationDay" Type="Int32" />
+          <Property Name="FTimes" Type="Int32" />
+          <Property Name="FSpeedType" Type="Int32" />
+          <Property Name="FSysMemo" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+          <Property Name="FCreateDate" Type="DateTime" Precision="3" />
+          <Property Name="FCreateCompany" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="FCreateUser" Type="Int32" />
+          <Property Name="FSysPut" Type="Boolean" />
+          <Property Name="FSysPutDate" Type="DateTime" Precision="3" />
+          <Property Name="FSysPutUser" Type="Int32" />
+          <Property Name="FSysSend" Type="Boolean" />
+          <Property Name="FSysSendDate" Type="DateTime" Precision="3" />
+          <Property Name="FSysSendUser" Type="Int32" />
+          <Property Name="FSysPrint" Type="Boolean" />
+          <Property Name="FSysPrintDate" Type="DateTime" Precision="3" />
+          <Property Name="FSysPrintUser" Type="Int32" />
+          <Property Name="FSysChk" Type="Boolean" />
+          <Property Name="FSysChkDate" Type="DateTime" Precision="3" />
+          <Property Name="FSysChkUser" Type="Int32" />
+          <Property Name="FSysSure" Type="Boolean" />
+          <Property Name="FSysSureDate" Type="DateTime" Precision="3" />
+          <Property Name="FSysSureUser" Type="Int32" />
+          <Property Name="FModifyDate" Type="DateTime" Precision="3" />
+          <Property Name="FModifyUser" Type="Int32" />
+          <Property Name="FStopSend" Type="Boolean" />
+          <Property Name="FYNCom" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="FsysZF" Type="Boolean" />
+          <Property Name="FQZID" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="TB_Position">
+          <Key>
+            <PropertyRef Name="FID" />
+          </Key>
+          <Property Name="FID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FGroupID" Type="Int32" />
+          <Property Name="FName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="FX" Type="Int32" />
+          <Property Name="FY" Type="Int32" />
+          <Property Name="FCreateDate" Type="DateTime" Precision="3" />
+          <Property Name="FCreateUser" Type="Int32" />
+          <Property Name="FModifyDate" Type="DateTime" Precision="3" />
+          <Property Name="FModifyUser" Type="Int32" />
+          <Property Name="FStatus" Type="Boolean" />
+        </EntityType>
+        <EntityType Name="SendInfo">
+          <Key>
+            <PropertyRef Name="FID" />
+          </Key>
+          <Property Name="FID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FSendNo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="FCustomerID" Type="Int32" Nullable="false" />
+          <Property Name="FCDate" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="FQZID" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="FSendDate" Type="DateTime" Precision="3" />
+          <Property Name="FDSN" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="FCreateCompany" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="FVietnamCompany" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="FSysMemo" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+          <Property Name="FPrintCount" Type="Int32" />
+          <Property Name="FIDOrder" Type="Int32" />
+          <Property Name="FVID" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="FSysSend" Type="Boolean" />
+          <Property Name="FSysSendDate" Type="DateTime" Precision="3" />
+          <Property Name="FSysSendUser" Type="Int32" />
+          <Property Name="FSysChk" Type="Boolean" />
+          <Property Name="FSysChkDate" Type="DateTime" Precision="3" />
+          <Property Name="FSysChkUser" Type="Int32" />
+          <Property Name="FSysPrint" Type="Boolean" />
+          <Property Name="FSysPrintNum" Type="Int32" />
+          <Property Name="FSysPrintDate" Type="DateTime" Precision="3" />
+          <Property Name="FSysPrintUser" Type="Int32" />
+          <Property Name="FOrder" Type="Int32" />
+          <Property Name="FCreateDate" Type="DateTime" Precision="3" />
+          <Property Name="FCreateUser" Type="Int32" />
+          <Property Name="FModifyDate" Type="DateTime" Precision="3" />
+          <Property Name="FModifyUser" Type="Int32" />
+          <Property Name="FStatus" Type="Boolean" />
+        </EntityType>
+        <EntityType Name="CustomerT">
+          <Key>
+            <PropertyRef Name="FID" />
+          </Key>
+          <Property Name="FID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FName" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+          <Property Name="FNameEn" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="FBirthDay" Type="DateTime" Precision="3" />
+          <Property Name="FSex" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+          <Property Name="FBirthPlace" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="FBirthPlaceEn" Type="String" MaxLength="400" FixedLength="false" Unicode="false" />
+          <Property Name="FBirthNationlity" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="FBirthNationlityEn" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="FBirthNationlityPresent" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="FBirthNationlityPresentEn" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="FPassportNo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="FPassportType" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="FPassportMake" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="FPassportMakeDate" Type="DateTime" Precision="3" />
+          <Property Name="FPassportValidDate" Type="DateTime" Precision="3" />
+          <Property Name="FProfessionWork" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="FProfessionCompany" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="FProfessionTele" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="FAddressNow" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="FAddressTele" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="FPurpose" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="FSysMemo" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+          <Property Name="FCreateDate" Type="DateTime" Precision="3" />
+          <Property Name="FCreateCompany" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="FCreateUser" Type="Int32" />
+          <Property Name="FModifyDate" Type="DateTime" Precision="3" />
+          <Property Name="FModifyUser" Type="Int32" />
+        </EntityType>
+        <EntityType Name="TB_AuditPosition">
+          <Key>
+            <PropertyRef Name="FID" />
+          </Key>
+          <Property Name="FID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="FOrder" Type="Int32" />
+          <Property Name="FCreateDate" Type="DateTime" Precision="3" />
+          <Property Name="FCreateUser" Type="Int32" />
+          <Property Name="FModifyDate" Type="DateTime" Precision="3" />
+          <Property Name="FModifyUser" Type="Int32" />
+          <Property Name="FStatus" Type="Boolean" />
+        </EntityType>
+        <EntityType Name="TB_AuditUser">
+          <Key>
+            <PropertyRef Name="FID" />
+          </Key>
+          <Property Name="FID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="FOrder" Type="Int32" />
+          <Property Name="FCreateDate" Type="DateTime" Precision="3" />
+          <Property Name="FCreateUser" Type="Int32" />
+          <Property Name="FModifyDate" Type="DateTime" Precision="3" />
+          <Property Name="FModifyUser" Type="Int32" />
+          <Property Name="FStatus" Type="Boolean" />
+        </EntityType>
+        <EntityType Name="QZKC">
+          <Key>
+            <PropertyRef Name="FQZID" />
+          </Key>
+          <Property Name="FQZID" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="FIsUse" Type="Boolean" Nullable="false" />
+        </EntityType>
+        <ComplexType Name="sp_SendDtl1_Select_Result">
+          <Property Type="Int32" Name="Sele" Nullable="false" />
+          <Property Type="Int32" Name="TT" Nullable="false" />
+          <Property Type="String" Name="FName" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="BirthDay" Nullable="true" MaxLength="10" />
+          <Property Type="String" Name="Fsex" Nullable="true" MaxLength="1" />
+          <Property Type="String" Name="FBirthNationlityEn" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="FBirthNationlityPresentEn" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="PID" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="Work" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="CQJDate" Nullable="true" MaxLength="23" />
+          <Property Type="String" Name="TimesName" Nullable="false" MaxLength="2" />
+          <Property Type="Int32" Name="FID" Nullable="false" />
+          <Property Type="Int32" Name="Days" Nullable="true" />
+          <Property Type="Int32" Name="FTimes" Nullable="true" />
+          <Property Type="Int32" Name="IDOrder" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="sp_Customer_Select_ByDate_Result">
+          <Property Type="Int32" Name="FID" Nullable="false" />
+          <Property Type="String" Name="FAutoID" Nullable="true" MaxLength="40" />
+          <Property Type="String" Name="FName" Nullable="true" MaxLength="40" />
+          <Property Type="String" Name="FNameEn" Nullable="true" MaxLength="100" />
+          <Property Type="DateTime" Name="FBirthDay" Nullable="true" Precision="23" />
+          <Property Type="String" Name="FSex" Nullable="true" MaxLength="1" />
+          <Property Type="String" Name="FBirthPlace" Nullable="true" MaxLength="200" />
+          <Property Type="String" Name="FBirthPlaceEn" Nullable="true" MaxLength="400" />
+          <Property Type="String" Name="FBirthNationlity" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="FBirthNationlityEn" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="FBirthNationlityPresent" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="FBirthNationlityPresentEn" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="FPassportNo" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="FPassportType" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="FPassportMake" Nullable="true" MaxLength="100" />
+          <Property Type="DateTime" Name="FPassportMakeDate" Nullable="true" Precision="23" />
+          <Property Type="DateTime" Name="FPassportValidDate" Nullable="true" Precision="23" />
+          <Property Type="String" Name="FProfessionWork" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="FProfessionCompany" Nullable="true" MaxLength="200" />
+          <Property Type="String" Name="FProfessionTele" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="FAddressNow" Nullable="true" MaxLength="200" />
+          <Property Type="String" Name="FAddressTele" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="FChildrenName1" Nullable="true" MaxLength="40" />
+          <Property Type="DateTime" Name="FChildrenBirthDay1" Nullable="true" Precision="23" />
+          <Property Type="String" Name="FChildrenBirthLink1" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="FChildrenName2" Nullable="true" MaxLength="40" />
+          <Property Type="DateTime" Name="FChildrenBirthDay2" Nullable="true" Precision="23" />
+          <Property Type="String" Name="FChildrenBirthLink2" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="FChildrenName3" Nullable="true" MaxLength="40" />
+          <Property Type="DateTime" Name="FChildrenBirthDay3" Nullable="true" Precision="23" />
+          <Property Type="String" Name="FChildrenBirthLink3" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="FPurpose" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="FVisitCompany" Nullable="true" MaxLength="200" />
+          <Property Type="String" Name="FVisitnamName" Nullable="true" MaxLength="40" />
+          <Property Type="String" Name="FVisitnamAddress" Nullable="true" MaxLength="200" />
+          <Property Type="DateTime" Name="FDurationBegin" Nullable="true" Precision="23" />
+          <Property Type="DateTime" Name="FDurationEnd" Nullable="true" Precision="23" />
+          <Property Type="Int32" Name="FDurationDay" Nullable="true" />
+          <Property Type="Int32" Name="FTimes" Nullable="true" />
+          <Property Type="String" Name="TimesName" Nullable="false" MaxLength="4" />
+          <Property Type="String" Name="SpeedTypeName" Nullable="false" MaxLength="2" />
+          <Property Type="String" Name="DurationDayName" Nullable="false" MaxLength="5" />
+          <Property Type="Int32" Name="FSpeedType" Nullable="true" />
+          <Property Type="String" Name="FSysMemo" Nullable="true" MaxLength="1000" />
+          <Property Type="DateTime" Name="FCreateDate" Nullable="true" Precision="23" />
+          <Property Type="String" Name="FCreateCompany" Nullable="true" MaxLength="200" />
+          <Property Type="Int32" Name="FCreateUser" Nullable="true" />
+          <Property Type="Boolean" Name="FSysPut" Nullable="true" />
+          <Property Type="DateTime" Name="FSysPutDate" Nullable="true" Precision="23" />
+          <Property Type="Int32" Name="FSysPutUser" Nullable="true" />
+          <Property Type="Boolean" Name="FSysSend" Nullable="true" />
+          <Property Type="DateTime" Name="FSysSendDate" Nullable="true" Precision="23" />
+          <Property Type="Int32" Name="FSysSendUser" Nullable="true" />
+          <Property Type="Boolean" Name="FSysPrint" Nullable="true" />
+          <Property Type="DateTime" Name="FSysPrintDate" Nullable="true" Precision="23" />
+          <Property Type="Int32" Name="FSysPrintUser" Nullable="true" />
+          <Property Type="Boolean" Name="FSysChk" Nullable="true" />
+          <Property Type="DateTime" Name="FSysChkDate" Nullable="true" Precision="23" />
+          <Property Type="Int32" Name="FSysChkUser" Nullable="true" />
+          <Property Type="Boolean" Name="FSysSure" Nullable="true" />
+          <Property Type="DateTime" Name="FSysSureDate" Nullable="true" Precision="23" />
+          <Property Type="Int32" Name="FSysSureUser" Nullable="true" />
+          <Property Type="DateTime" Name="FModifyDate" Nullable="true" Precision="23" />
+          <Property Type="Int32" Name="FModifyUser" Nullable="true" />
+          <Property Type="Boolean" Name="FStopSend" Nullable="true" />
+          <Property Type="String" Name="FYNCom" Nullable="true" MaxLength="20" />
+          <Property Type="Boolean" Name="FsysZF" Nullable="false" />
+          <Property Type="String" Name="FQZID" Nullable="true" MaxLength="100" />
+        </ComplexType>
+        <ComplexType Name="sp_SelectTbSubmit_Result">
+          <Property Type="Int32" Name="STT" Nullable="true" />
+          <Property Type="String" Name="FName" Nullable="false" MaxLength="100" />
+          <Property Type="String" Name="FPassportNo" Nullable="false" MaxLength="50" />
+          <Property Type="Boolean" Name="Times_1S" Nullable="true" />
+          <Property Type="Boolean" Name="Times_1M" Nullable="true" />
+          <Property Type="Boolean" Name="Times_3S" Nullable="true" />
+          <Property Type="Boolean" Name="Times_3M" Nullable="true" />
+          <Property Type="Boolean" Name="Times_6S" Nullable="true" />
+          <Property Type="Boolean" Name="Times_6M" Nullable="true" />
+          <Property Type="Boolean" Name="Times_Others" Nullable="true" />
+          <Property Type="Boolean" Name="Speed_ND" Nullable="true" />
+          <Property Type="Boolean" Name="Speed_O" Nullable="true" />
+          <Property Type="Boolean" Name="Speed_NA" Nullable="true" />
+          <Property Type="Int32" Name="FID" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="sp_SelectPrintSendInfoBatch_Result">
+          <Property Type="Boolean" Name="Sele" Nullable="true" />
+          <Property Type="Int32" Name="TT" Nullable="true" />
+          <Property Type="String" Name="Name" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="BirthDay" Nullable="true" MaxLength="25" />
+          <Property Type="DateTime" Name="FBirthDay" Nullable="true" Precision="23" />
+          <Property Type="String" Name="Sex" Nullable="false" MaxLength="1" />
+          <Property Type="String" Name="FBirthNationlityEn" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="FBirthNationlityPresentEn" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="FSysMemo" Nullable="true" MaxLength="1000" />
+          <Property Type="String" Name="PID" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="Work" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="CQJDate" Nullable="true" MaxLength="23" />
+          <Property Type="String" Name="TimesName" Nullable="false" MaxLength="2" />
+          <Property Type="Int32" Name="QID" Nullable="false" />
+          <Property Type="Int32" Name="Days" Nullable="true" />
+          <Property Type="Int32" Name="FTimes" Nullable="true" />
+          <Property Type="Boolean" Name="FSysPut" Nullable="true" />
+          <Property Type="Boolean" Name="FSysSend" Nullable="true" />
+          <Property Type="String" Name="FQZID" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="FDSN" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="FVID" Nullable="true" MaxLength="200" />
+          <Property Type="String" Name="FCreateCompany" Nullable="true" MaxLength="200" />
+          <Property Type="Int32" Name="PrintCount" Nullable="false" />
+          <Property Type="String" Name="DDate" Nullable="true" MaxLength="25" />
+          <Property Type="String" Name="PDate" Nullable="true" MaxLength="25" />
+          <Property Type="String" Name="CType" Nullable="false" MaxLength="3" />
+          <Property Type="String" Name="MDate" Nullable="true" MaxLength="25" />
+          <Property Type="Int32" Name="IDOrder" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="sp_SelectTable1ForListName_Result">
+          <Property Type="Int32" Name="FID" Nullable="false" />
+          <Property Type="String" Name="FNameEn" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="FPassportNo" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="FAutoID" Nullable="true" MaxLength="40" />
+          <Property Type="DateTime" Name="FCreateDate" Nullable="true" Precision="23" />
+          <Property Type="String" Name="FSubmitNo" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="FDSN" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="FQZID" Nullable="true" MaxLength="100" />
+        </ComplexType>
+        <ComplexType Name="sp_SelectPrintSendInfo_Result">
+          <Property Type="Boolean" Name="Sele" Nullable="true" />
+          <Property Type="Boolean" Name="FSelectItem" Nullable="true" />
+          <Property Type="Int32" Name="TT" Nullable="true" />
+          <Property Type="String" Name="Name" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="BirthDay" Nullable="true" MaxLength="25" />
+          <Property Type="DateTime" Name="FBirthDay" Nullable="true" Precision="23" />
+          <Property Type="String" Name="FSysMemo" Nullable="true" MaxLength="1000" />
+          <Property Type="String" Name="Sex" Nullable="false" MaxLength="1" />
+          <Property Type="String" Name="FBirthNationlityEn" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="FBirthNationlityPresentEn" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="PID" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="Work" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="CQJDate" Nullable="true" MaxLength="23" />
+          <Property Type="String" Name="TimesName" Nullable="false" MaxLength="2" />
+          <Property Type="Int32" Name="QID" Nullable="false" />
+          <Property Type="Int32" Name="Days" Nullable="true" />
+          <Property Type="Int32" Name="FTimes" Nullable="true" />
+          <Property Type="Boolean" Name="FSysPut" Nullable="true" />
+          <Property Type="Boolean" Name="FSysSend" Nullable="true" />
+          <Property Type="String" Name="FQZID" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="FDSN" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="FVID" Nullable="true" MaxLength="200" />
+          <Property Type="String" Name="FCreateCompany" Nullable="true" MaxLength="200" />
+          <Property Type="Int32" Name="PrintCount" Nullable="false" />
+          <Property Type="String" Name="DDate" Nullable="true" MaxLength="25" />
+          <Property Type="String" Name="PDate" Nullable="true" MaxLength="25" />
+          <Property Type="String" Name="CType" Nullable="false" MaxLength="3" />
+          <Property Type="String" Name="MDate" Nullable="true" MaxLength="25" />
+          <Property Type="Int32" Name="IDOrder" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="sp_SelectTable3ForAdd_Result">
+          <Property Type="Int32" Name="TT" Nullable="false" />
+          <Property Type="String" Name="FName" Nullable="true" MaxLength="40" />
+          <Property Type="String" Name="FNameEn" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="FBirthDay" Nullable="true" MaxLength="10" />
+          <Property Type="String" Name="FSex" Nullable="false" MaxLength="1" />
+          <Property Type="String" Name="FBirthNationlityEn" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="FBirthNationlityPresentEn" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="FSysMemo" Nullable="true" MaxLength="1000" />
+          <Property Type="String" Name="FPassportNo" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="FProfessionWork" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="CQJDate" Nullable="true" MaxLength="23" />
+          <Property Type="String" Name="TimesName" Nullable="false" MaxLength="2" />
+          <Property Type="String" Name="DurationName" Nullable="true" MaxLength="5" />
+          <Property Type="Int32" Name="FID" Nullable="false" />
+          <Property Type="String" Name="FAutoID" Nullable="true" MaxLength="40" />
+          <Property Type="String" Name="FQZID" Nullable="true" MaxLength="100" />
+          <Property Type="DateTime" Name="FSysSendDate" Nullable="true" Precision="23" />
+          <Property Type="Int32" Name="FSysSendUser" Nullable="true" />
+          <Property Type="String" Name="FYNCom" Nullable="true" MaxLength="20" />
+          <Property Type="Boolean" Name="FsysZF" Nullable="true" />
+          <Property Type="Boolean" Name="FStopSend" Nullable="true" />
+          <Property Type="Int32" Name="FDurationDay" Nullable="true" />
+          <Property Type="String" Name="FPurpose" Nullable="true" MaxLength="50" />
+          <Property Type="Int32" Name="FTimes" Nullable="true" />
+          <Property Type="Boolean" Name="FSysPut" Nullable="true" />
+          <Property Type="Boolean" Name="FSysSend" Nullable="true" />
+          <Property Type="String" Name="FCreateCompany" Nullable="true" MaxLength="200" />
+          <Property Type="DateTime" Name="FPassportValidDate" Nullable="true" Precision="23" />
+          <Property Type="DateTime" Name="FDurationBegin" Nullable="true" Precision="23" />
+          <Property Type="DateTime" Name="FDurationEnd" Nullable="true" Precision="23" />
+          <Property Type="Int32" Name="FOrder" Nullable="false" />
+          <Property Type="Int32" Name="iType" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="sp_SelectTable3ForExcel_Result">
+          <Property Type="Int32" Name="Sele" Nullable="false" />
+          <Property Type="Int32" Name="TT" Nullable="false" />
+          <Property Type="String" Name="Name" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="BirthDay" Nullable="true" MaxLength="10" />
+          <Property Type="String" Name="Sex" Nullable="false" MaxLength="1" />
+          <Property Type="String" Name="FBirthNationlityEn" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="FBirthNationlityPresentEn" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="FSysMemo" Nullable="true" MaxLength="1000" />
+          <Property Type="String" Name="PID" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="Work" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="CQJDate" Nullable="true" MaxLength="23" />
+          <Property Type="String" Name="TimesName" Nullable="false" MaxLength="2" />
+          <Property Type="Int32" Name="QID" Nullable="false" />
+          <Property Type="Int32" Name="Days" Nullable="true" />
+          <Property Type="Int32" Name="FTimes" Nullable="true" />
+          <Property Type="Boolean" Name="FSysPut" Nullable="true" />
+          <Property Type="Boolean" Name="FSysSend" Nullable="true" />
+          <Property Type="String" Name="FPurpose" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="FCreateCompany" Nullable="true" MaxLength="200" />
+          <Property Type="DateTime" Name="FPassportValidDate" Nullable="true" Precision="23" />
+          <Property Type="Boolean" Name="SelectChk" Nullable="true" />
+          <Property Type="Int32" Name="IDOrder" Nullable="false" />
+          <Property Type="Int32" Name="iType" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="sp_SelectPrintSendInfoBatchByNumber_Result">
+          <Property Type="Boolean" Name="Sele" Nullable="true" />
+          <Property Type="Int32" Name="TT" Nullable="true" />
+          <Property Type="String" Name="Name" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="BirthDay" Nullable="true" MaxLength="25" />
+          <Property Type="DateTime" Name="FBirthDay" Nullable="true" Precision="23" />
+          <Property Type="String" Name="Sex" Nullable="false" MaxLength="1" />
+          <Property Type="String" Name="FBirthNationlityEn" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="FBirthNationlityPresentEn" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="FSysMemo" Nullable="true" MaxLength="1000" />
+          <Property Type="String" Name="PID" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="Work" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="CQJDate" Nullable="true" MaxLength="23" />
+          <Property Type="String" Name="TimesName" Nullable="false" MaxLength="2" />
+          <Property Type="Int32" Name="QID" Nullable="false" />
+          <Property Type="Int32" Name="Days" Nullable="true" />
+          <Property Type="Int32" Name="FTimes" Nullable="true" />
+          <Property Type="Boolean" Name="FSysPut" Nullable="true" />
+          <Property Type="Boolean" Name="FSysSend" Nullable="true" />
+          <Property Type="String" Name="FQZID" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="FDSN" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="FVID" Nullable="true" MaxLength="200" />
+          <Property Type="String" Name="FCreateCompany" Nullable="true" MaxLength="200" />
+          <Property Type="Int32" Name="PrintCount" Nullable="false" />
+          <Property Type="String" Name="DDate" Nullable="true" MaxLength="25" />
+          <Property Type="String" Name="PDate" Nullable="true" MaxLength="25" />
+          <Property Type="String" Name="CType" Nullable="false" MaxLength="3" />
+          <Property Type="String" Name="MDate" Nullable="true" MaxLength="25" />
+          <Property Type="Int32" Name="IDOrder" Nullable="false" />
+        </ComplexType>
+        <EntityType Name="TB_TableSubmit">
+          <Key>
+            <PropertyRef Name="FID" />
+          </Key>
+          <Property Name="FID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FSubmitNo" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="FAutoID" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="FCDate" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="FCompany" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="FCreateDate" Type="DateTime" Precision="3" />
+          <Property Name="FCreateUser" Type="Int32" />
+          <Property Name="FModifyDate" Type="DateTime" Precision="3" />
+          <Property Name="FModifyUser" Type="Int32" />
+          <Property Name="FStatus" Type="Boolean" />
+          <Property Name="FSysMemo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <ComplexType Name="sp_SelectTbSubmitWithSubmitNo_Result">
+          <Property Type="Int32" Name="STT" Nullable="true" />
+          <Property Type="String" Name="FName" Nullable="false" MaxLength="100" />
+          <Property Type="String" Name="FPassportNo" Nullable="false" MaxLength="50" />
+          <Property Type="Boolean" Name="Times_1S" Nullable="true" />
+          <Property Type="Boolean" Name="Times_3S" Nullable="true" />
+          <Property Type="Boolean" Name="Times_6S" Nullable="true" />
+          <Property Type="Boolean" Name="Times_1M" Nullable="true" />
+          <Property Type="Boolean" Name="Times_3M" Nullable="true" />
+          <Property Type="Boolean" Name="Times_6M" Nullable="true" />
+          <Property Type="Boolean" Name="Times_Others" Nullable="true" />
+          <Property Type="Boolean" Name="Speed_ND" Nullable="true" />
+          <Property Type="Boolean" Name="Speed_O" Nullable="true" />
+          <Property Type="Boolean" Name="Speed_NA" Nullable="true" />
+          <Property Type="Int32" Name="FID" Nullable="false" />
+        </ComplexType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="visaModelStoreContainer" CdmEntityContainer="visaEntities">
+          <EntitySetMapping Name="IDC">
+            <EntityTypeMapping TypeName="visaModel.IDC">
+              <MappingFragment StoreEntitySet="IDC">
+                <ScalarProperty Name="FDQ" ColumnName="FDQ" />
+                <ScalarProperty Name="FBM" ColumnName="FBM" />
+                <ScalarProperty Name="FID" ColumnName="FID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TB_Menu">
+            <EntityTypeMapping TypeName="visaModel.TB_Menu">
+              <MappingFragment StoreEntitySet="TB_Menu">
+                <ScalarProperty Name="FStatus" ColumnName="FStatus" />
+                <ScalarProperty Name="FModifyUser" ColumnName="FModifyUser" />
+                <ScalarProperty Name="FModifyDate" ColumnName="FModifyDate" />
+                <ScalarProperty Name="FCreateUser" ColumnName="FCreateUser" />
+                <ScalarProperty Name="FCreateDate" ColumnName="FCreateDate" />
+                <ScalarProperty Name="FNavTo" ColumnName="FNavTo" />
+                <ScalarProperty Name="FParent" ColumnName="FParent" />
+                <ScalarProperty Name="FType" ColumnName="FType" />
+                <ScalarProperty Name="FOrder" ColumnName="FOrder" />
+                <ScalarProperty Name="FName" ColumnName="FName" />
+                <ScalarProperty Name="FID" ColumnName="FID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TCheck">
+            <EntityTypeMapping TypeName="visaModel.TCheck">
+              <MappingFragment StoreEntitySet="TCheck">
+                <ScalarProperty Name="FDistFieldName" ColumnName="FDistFieldName" />
+                <ScalarProperty Name="FSourceFieldName" ColumnName="FSourceFieldName" />
+                <ScalarProperty Name="FType" ColumnName="FType" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TCountry">
+            <EntityTypeMapping TypeName="visaModel.TCountry">
+              <MappingFragment StoreEntitySet="TCountry">
+                <ScalarProperty Name="Fcountryshort" ColumnName="Fcountryshort" />
+                <ScalarProperty Name="FCountryEn" ColumnName="FCountryEn" />
+                <ScalarProperty Name="FCountry" ColumnName="FCountry" />
+                <ScalarProperty Name="FID" ColumnName="FID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TPara">
+            <EntityTypeMapping TypeName="visaModel.TPara">
+              <MappingFragment StoreEntitySet="TPara">
+                <ScalarProperty Name="FParaValue" ColumnName="FParaValue" />
+                <ScalarProperty Name="FParaID" ColumnName="FParaID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="User">
+            <EntityTypeMapping TypeName="visaModel.User">
+              <MappingFragment StoreEntitySet="User">
+                <ScalarProperty Name="FPhoneNo" ColumnName="FPhoneNo" />
+                <ScalarProperty Name="FWorkCompanyName" ColumnName="FWorkCompanyName" />
+                <ScalarProperty Name="FIsClient" ColumnName="FIsClient" />
+                <ScalarProperty Name="FCompanyName" ColumnName="FCompanyName" />
+                <ScalarProperty Name="FIsDelete" ColumnName="FIsDelete" />
+                <ScalarProperty Name="FPassword" ColumnName="FPassword" />
+                <ScalarProperty Name="FUserName" ColumnName="FUserName" />
+                <ScalarProperty Name="FUserID" ColumnName="FUserID" />
+                <ScalarProperty Name="FID" ColumnName="FID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="UserRight">
+            <EntityTypeMapping TypeName="visaModel.UserRight">
+              <MappingFragment StoreEntitySet="UserRight">
+                <ScalarProperty Name="FRightID" ColumnName="FRightID" />
+                <ScalarProperty Name="FID" ColumnName="FID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TB_VietnamCompany">
+            <EntityTypeMapping TypeName="visaModel.TB_VietnamCompany">
+              <MappingFragment StoreEntitySet="TB_VietnamCompany">
+                <ScalarProperty Name="FStatus" ColumnName="FStatus" />
+                <ScalarProperty Name="FModifyUser" ColumnName="FModifyUser" />
+                <ScalarProperty Name="FModifyDate" ColumnName="FModifyDate" />
+                <ScalarProperty Name="FCreateUser" ColumnName="FCreateUser" />
+                <ScalarProperty Name="FCreateDate" ColumnName="FCreateDate" />
+                <ScalarProperty Name="FOrder" ColumnName="FOrder" />
+                <ScalarProperty Name="FShortName" ColumnName="FShortName" />
+                <ScalarProperty Name="FFullName" ColumnName="FFullName" />
+                <ScalarProperty Name="FID" ColumnName="FID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SendDtl">
+            <EntityTypeMapping TypeName="visaModel.SendDtl">
+              <MappingFragment StoreEntitySet="SendDtl">
+                <ScalarProperty Name="FStatus" ColumnName="FStatus" />
+                <ScalarProperty Name="FModifyUser" ColumnName="FModifyUser" />
+                <ScalarProperty Name="FModifyDate" ColumnName="FModifyDate" />
+                <ScalarProperty Name="FCreateUser" ColumnName="FCreateUser" />
+                <ScalarProperty Name="FCreateDate" ColumnName="FCreateDate" />
+                <ScalarProperty Name="Fidorder" ColumnName="Fidorder" />
+                <ScalarProperty Name="FPrintCount" ColumnName="FPrintCount" />
+                <ScalarProperty Name="FSysChkDate" ColumnName="FSysChkDate" />
+                <ScalarProperty Name="FSysChkUser" ColumnName="FSysChkUser" />
+                <ScalarProperty Name="FSysChk" ColumnName="FSysChk" />
+                <ScalarProperty Name="FQZID" ColumnName="FQZID" />
+                <ScalarProperty Name="FCustomerID" ColumnName="FCustomerID" />
+                <ScalarProperty Name="FID" ColumnName="FID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="v_Report4">
+            <EntityTypeMapping TypeName="visaModel.v_Report4">
+              <MappingFragment StoreEntitySet="v_Report4">
+                <ScalarProperty Name="FBirthNationlityPresentEn" ColumnName="FBirthNationlityPresentEn" />
+                <ScalarProperty Name="FCustomerID" ColumnName="FCustomerID" />
+                <ScalarProperty Name="FQZIDS" ColumnName="FQZIDS" />
+                <ScalarProperty Name="FSendNo" ColumnName="FSendNo" />
+                <ScalarProperty Name="FCreateCompany" ColumnName="FCreateCompany" />
+                <ScalarProperty Name="CQJDate" ColumnName="CQJDate" />
+                <ScalarProperty Name="FPassportNo" ColumnName="FPassportNo" />
+                <ScalarProperty Name="FQZID" ColumnName="FQZID" />
+                <ScalarProperty Name="FBirthDay" ColumnName="FBirthDay" />
+                <ScalarProperty Name="FNameEn" ColumnName="FNameEn" />
+                <ScalarProperty Name="TT" ColumnName="TT" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TB_UserRights">
+            <EntityTypeMapping TypeName="visaModel.TB_UserRights">
+              <MappingFragment StoreEntitySet="TB_UserRights">
+                <ScalarProperty Name="FStatus" ColumnName="FStatus" />
+                <ScalarProperty Name="FModifyUser" ColumnName="FModifyUser" />
+                <ScalarProperty Name="FModifyDate" ColumnName="FModifyDate" />
+                <ScalarProperty Name="FCreateUser" ColumnName="FCreateUser" />
+                <ScalarProperty Name="FCreateDate" ColumnName="FCreateDate" />
+                <ScalarProperty Name="FMenuID" ColumnName="FMenuID" />
+                <ScalarProperty Name="FUserID" ColumnName="FUserID" />
+                <ScalarProperty Name="FID" ColumnName="FID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Customer">
+            <EntityTypeMapping TypeName="visaModel.Customer">
+              <MappingFragment StoreEntitySet="Customer">
+                <ScalarProperty Name="FQZID" ColumnName="FQZID" />
+                <ScalarProperty Name="FsysZF" ColumnName="FsysZF" />
+                <ScalarProperty Name="FYNCom" ColumnName="FYNCom" />
+                <ScalarProperty Name="FStopSend" ColumnName="FStopSend" />
+                <ScalarProperty Name="FModifyUser" ColumnName="FModifyUser" />
+                <ScalarProperty Name="FModifyDate" ColumnName="FModifyDate" />
+                <ScalarProperty Name="FSysSureUser" ColumnName="FSysSureUser" />
+                <ScalarProperty Name="FSysSureDate" ColumnName="FSysSureDate" />
+                <ScalarProperty Name="FSysSure" ColumnName="FSysSure" />
+                <ScalarProperty Name="FSysChkUser" ColumnName="FSysChkUser" />
+                <ScalarProperty Name="FSysChkDate" ColumnName="FSysChkDate" />
+                <ScalarProperty Name="FSysChk" ColumnName="FSysChk" />
+                <ScalarProperty Name="FSysPrintUser" ColumnName="FSysPrintUser" />
+                <ScalarProperty Name="FSysPrintDate" ColumnName="FSysPrintDate" />
+                <ScalarProperty Name="FSysPrint" ColumnName="FSysPrint" />
+                <ScalarProperty Name="FSysSendUser" ColumnName="FSysSendUser" />
+                <ScalarProperty Name="FSysSendDate" ColumnName="FSysSendDate" />
+                <ScalarProperty Name="FSysSend" ColumnName="FSysSend" />
+                <ScalarProperty Name="FSysPutUser" ColumnName="FSysPutUser" />
+                <ScalarProperty Name="FSysPutDate" ColumnName="FSysPutDate" />
+                <ScalarProperty Name="FSysPut" ColumnName="FSysPut" />
+                <ScalarProperty Name="FCreateUser" ColumnName="FCreateUser" />
+                <ScalarProperty Name="FCreateCompany" ColumnName="FCreateCompany" />
+                <ScalarProperty Name="FCreateDate" ColumnName="FCreateDate" />
+                <ScalarProperty Name="FSysMemo" ColumnName="FSysMemo" />
+                <ScalarProperty Name="FSpeedType" ColumnName="FSpeedType" />
+                <ScalarProperty Name="FTimes" ColumnName="FTimes" />
+                <ScalarProperty Name="FDurationDay" ColumnName="FDurationDay" />
+                <ScalarProperty Name="FDurationEnd" ColumnName="FDurationEnd" />
+                <ScalarProperty Name="FDurationBegin" ColumnName="FDurationBegin" />
+                <ScalarProperty Name="FVisitnamAddress" ColumnName="FVisitnamAddress" />
+                <ScalarProperty Name="FVisitnamName" ColumnName="FVisitnamName" />
+                <ScalarProperty Name="FVisitCompany" ColumnName="FVisitCompany" />
+                <ScalarProperty Name="FPurpose" ColumnName="FPurpose" />
+                <ScalarProperty Name="FChildrenBirthLink3" ColumnName="FChildrenBirthLink3" />
+                <ScalarProperty Name="FChildrenBirthDay3" ColumnName="FChildrenBirthDay3" />
+                <ScalarProperty Name="FChildrenName3" ColumnName="FChildrenName3" />
+                <ScalarProperty Name="FChildrenBirthLink2" ColumnName="FChildrenBirthLink2" />
+                <ScalarProperty Name="FChildrenBirthDay2" ColumnName="FChildrenBirthDay2" />
+                <ScalarProperty Name="FChildrenName2" ColumnName="FChildrenName2" />
+                <ScalarProperty Name="FChildrenBirthLink1" ColumnName="FChildrenBirthLink1" />
+                <ScalarProperty Name="FChildrenBirthDay1" ColumnName="FChildrenBirthDay1" />
+                <ScalarProperty Name="FChildrenName1" ColumnName="FChildrenName1" />
+                <ScalarProperty Name="FAddressTele" ColumnName="FAddressTele" />
+                <ScalarProperty Name="FAddressNow" ColumnName="FAddressNow" />
+                <ScalarProperty Name="FProfessionTele" ColumnName="FProfessionTele" />
+                <ScalarProperty Name="FProfessionCompany" ColumnName="FProfessionCompany" />
+                <ScalarProperty Name="FProfessionWork" ColumnName="FProfessionWork" />
+                <ScalarProperty Name="FPassportValidDate" ColumnName="FPassportValidDate" />
+                <ScalarProperty Name="FPassportMakeDate" ColumnName="FPassportMakeDate" />
+                <ScalarProperty Name="FPassportMake" ColumnName="FPassportMake" />
+                <ScalarProperty Name="FPassportType" ColumnName="FPassportType" />
+                <ScalarProperty Name="FPassportNo" ColumnName="FPassportNo" />
+                <ScalarProperty Name="FBirthNationlityPresentEn" ColumnName="FBirthNationlityPresentEn" />
+                <ScalarProperty Name="FBirthNationlityPresent" ColumnName="FBirthNationlityPresent" />
+                <ScalarProperty Name="FBirthNationlityEn" ColumnName="FBirthNationlityEn" />
+                <ScalarProperty Name="FBirthNationlity" ColumnName="FBirthNationlity" />
+                <ScalarProperty Name="FBirthPlaceEn" ColumnName="FBirthPlaceEn" />
+                <ScalarProperty Name="FBirthPlace" ColumnName="FBirthPlace" />
+                <ScalarProperty Name="FSex" ColumnName="FSex" />
+                <ScalarProperty Name="FBirthDay" ColumnName="FBirthDay" />
+                <ScalarProperty Name="FNameEn" ColumnName="FNameEn" />
+                <ScalarProperty Name="FName" ColumnName="FName" />
+                <ScalarProperty Name="FAutoID" ColumnName="FAutoID" />
+                <ScalarProperty Name="FID" ColumnName="FID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TB_Position">
+            <EntityTypeMapping TypeName="visaModel.TB_Position">
+              <MappingFragment StoreEntitySet="TB_Position">
+                <ScalarProperty Name="FStatus" ColumnName="FStatus" />
+                <ScalarProperty Name="FModifyUser" ColumnName="FModifyUser" />
+                <ScalarProperty Name="FModifyDate" ColumnName="FModifyDate" />
+                <ScalarProperty Name="FCreateUser" ColumnName="FCreateUser" />
+                <ScalarProperty Name="FCreateDate" ColumnName="FCreateDate" />
+                <ScalarProperty Name="FY" ColumnName="FY" />
+                <ScalarProperty Name="FX" ColumnName="FX" />
+                <ScalarProperty Name="FName" ColumnName="FName" />
+                <ScalarProperty Name="FGroupID" ColumnName="FGroupID" />
+                <ScalarProperty Name="FID" ColumnName="FID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SendInfo">
+            <EntityTypeMapping TypeName="visaModel.SendInfo">
+              <MappingFragment StoreEntitySet="SendInfo">
+                <ScalarProperty Name="FStatus" ColumnName="FStatus" />
+                <ScalarProperty Name="FModifyUser" ColumnName="FModifyUser" />
+                <ScalarProperty Name="FModifyDate" ColumnName="FModifyDate" />
+                <ScalarProperty Name="FCreateUser" ColumnName="FCreateUser" />
+                <ScalarProperty Name="FCreateDate" ColumnName="FCreateDate" />
+                <ScalarProperty Name="FOrder" ColumnName="FOrder" />
+                <ScalarProperty Name="FSysPrintUser" ColumnName="FSysPrintUser" />
+                <ScalarProperty Name="FSysPrintDate" ColumnName="FSysPrintDate" />
+                <ScalarProperty Name="FSysPrintNum" ColumnName="FSysPrintNum" />
+                <ScalarProperty Name="FSysPrint" ColumnName="FSysPrint" />
+                <ScalarProperty Name="FSysChkUser" ColumnName="FSysChkUser" />
+                <ScalarProperty Name="FSysChkDate" ColumnName="FSysChkDate" />
+                <ScalarProperty Name="FSysChk" ColumnName="FSysChk" />
+                <ScalarProperty Name="FSysSendUser" ColumnName="FSysSendUser" />
+                <ScalarProperty Name="FSysSendDate" ColumnName="FSysSendDate" />
+                <ScalarProperty Name="FSysSend" ColumnName="FSysSend" />
+                <ScalarProperty Name="FVID" ColumnName="FVID" />
+                <ScalarProperty Name="FIDOrder" ColumnName="FIDOrder" />
+                <ScalarProperty Name="FPrintCount" ColumnName="FPrintCount" />
+                <ScalarProperty Name="FSysMemo" ColumnName="FSysMemo" />
+                <ScalarProperty Name="FVietnamCompany" ColumnName="FVietnamCompany" />
+                <ScalarProperty Name="FCreateCompany" ColumnName="FCreateCompany" />
+                <ScalarProperty Name="FDSN" ColumnName="FDSN" />
+                <ScalarProperty Name="FSendDate" ColumnName="FSendDate" />
+                <ScalarProperty Name="FQZID" ColumnName="FQZID" />
+                <ScalarProperty Name="FCDate" ColumnName="FCDate" />
+                <ScalarProperty Name="FCustomerID" ColumnName="FCustomerID" />
+                <ScalarProperty Name="FSendNo" ColumnName="FSendNo" />
+                <ScalarProperty Name="FID" ColumnName="FID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CustomerT">
+            <EntityTypeMapping TypeName="visaModel.CustomerT">
+              <MappingFragment StoreEntitySet="CustomerT">
+                <ScalarProperty Name="FModifyUser" ColumnName="FModifyUser" />
+                <ScalarProperty Name="FModifyDate" ColumnName="FModifyDate" />
+                <ScalarProperty Name="FCreateUser" ColumnName="FCreateUser" />
+                <ScalarProperty Name="FCreateCompany" ColumnName="FCreateCompany" />
+                <ScalarProperty Name="FCreateDate" ColumnName="FCreateDate" />
+                <ScalarProperty Name="FSysMemo" ColumnName="FSysMemo" />
+                <ScalarProperty Name="FPurpose" ColumnName="FPurpose" />
+                <ScalarProperty Name="FAddressTele" ColumnName="FAddressTele" />
+                <ScalarProperty Name="FAddressNow" ColumnName="FAddressNow" />
+                <ScalarProperty Name="FProfessionTele" ColumnName="FProfessionTele" />
+                <ScalarProperty Name="FProfessionCompany" ColumnName="FProfessionCompany" />
+                <ScalarProperty Name="FProfessionWork" ColumnName="FProfessionWork" />
+                <ScalarProperty Name="FPassportValidDate" ColumnName="FPassportValidDate" />
+                <ScalarProperty Name="FPassportMakeDate" ColumnName="FPassportMakeDate" />
+                <ScalarProperty Name="FPassportMake" ColumnName="FPassportMake" />
+                <ScalarProperty Name="FPassportType" ColumnName="FPassportType" />
+                <ScalarProperty Name="FPassportNo" ColumnName="FPassportNo" />
+                <ScalarProperty Name="FBirthNationlityPresentEn" ColumnName="FBirthNationlityPresentEn" />
+                <ScalarProperty Name="FBirthNationlityPresent" ColumnName="FBirthNationlityPresent" />
+                <ScalarProperty Name="FBirthNationlityEn" ColumnName="FBirthNationlityEn" />
+                <ScalarProperty Name="FBirthNationlity" ColumnName="FBirthNationlity" />
+                <ScalarProperty Name="FBirthPlaceEn" ColumnName="FBirthPlaceEn" />
+                <ScalarProperty Name="FBirthPlace" ColumnName="FBirthPlace" />
+                <ScalarProperty Name="FSex" ColumnName="FSex" />
+                <ScalarProperty Name="FBirthDay" ColumnName="FBirthDay" />
+                <ScalarProperty Name="FNameEn" ColumnName="FNameEn" />
+                <ScalarProperty Name="FName" ColumnName="FName" />
+                <ScalarProperty Name="FID" ColumnName="FID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TB_AuditPosition">
+            <EntityTypeMapping TypeName="visaModel.TB_AuditPosition">
+              <MappingFragment StoreEntitySet="TB_AuditPosition">
+                <ScalarProperty Name="FStatus" ColumnName="FStatus" />
+                <ScalarProperty Name="FModifyUser" ColumnName="FModifyUser" />
+                <ScalarProperty Name="FModifyDate" ColumnName="FModifyDate" />
+                <ScalarProperty Name="FCreateUser" ColumnName="FCreateUser" />
+                <ScalarProperty Name="FCreateDate" ColumnName="FCreateDate" />
+                <ScalarProperty Name="FOrder" ColumnName="FOrder" />
+                <ScalarProperty Name="FName" ColumnName="FName" />
+                <ScalarProperty Name="FID" ColumnName="FID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TB_AuditUser">
+            <EntityTypeMapping TypeName="visaModel.TB_AuditUser">
+              <MappingFragment StoreEntitySet="TB_AuditUser">
+                <ScalarProperty Name="FStatus" ColumnName="FStatus" />
+                <ScalarProperty Name="FModifyUser" ColumnName="FModifyUser" />
+                <ScalarProperty Name="FModifyDate" ColumnName="FModifyDate" />
+                <ScalarProperty Name="FCreateUser" ColumnName="FCreateUser" />
+                <ScalarProperty Name="FCreateDate" ColumnName="FCreateDate" />
+                <ScalarProperty Name="FOrder" ColumnName="FOrder" />
+                <ScalarProperty Name="FName" ColumnName="FName" />
+                <ScalarProperty Name="FID" ColumnName="FID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="QZKC">
+            <EntityTypeMapping TypeName="visaModel.QZKC">
+              <MappingFragment StoreEntitySet="QZKC">
+                <ScalarProperty Name="FIsUse" ColumnName="FIsUse" />
+                <ScalarProperty Name="FQZID" ColumnName="FQZID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="sp_SelectTable1ForPrint" FunctionName="visaModel.Store.sp_SelectTable1ForPrint" />
+          <FunctionImportMapping FunctionImportName="sp_Customer_Select_ByDate" FunctionName="visaModel.Store.sp_Customer_Select_ByDate">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="visaModel.sp_Customer_Select_ByDate_Result">
+                <ScalarProperty Name="FID" ColumnName="FID" />
+                <ScalarProperty Name="FAutoID" ColumnName="FAutoID" />
+                <ScalarProperty Name="FName" ColumnName="FName" />
+                <ScalarProperty Name="FNameEn" ColumnName="FNameEn" />
+                <ScalarProperty Name="FBirthDay" ColumnName="FBirthDay" />
+                <ScalarProperty Name="FSex" ColumnName="FSex" />
+                <ScalarProperty Name="FBirthPlace" ColumnName="FBirthPlace" />
+                <ScalarProperty Name="FBirthPlaceEn" ColumnName="FBirthPlaceEn" />
+                <ScalarProperty Name="FBirthNationlity" ColumnName="FBirthNationlity" />
+                <ScalarProperty Name="FBirthNationlityEn" ColumnName="FBirthNationlityEn" />
+                <ScalarProperty Name="FBirthNationlityPresent" ColumnName="FBirthNationlityPresent" />
+                <ScalarProperty Name="FBirthNationlityPresentEn" ColumnName="FBirthNationlityPresentEn" />
+                <ScalarProperty Name="FPassportNo" ColumnName="FPassportNo" />
+                <ScalarProperty Name="FPassportType" ColumnName="FPassportType" />
+                <ScalarProperty Name="FPassportMake" ColumnName="FPassportMake" />
+                <ScalarProperty Name="FPassportMakeDate" ColumnName="FPassportMakeDate" />
+                <ScalarProperty Name="FPassportValidDate" ColumnName="FPassportValidDate" />
+                <ScalarProperty Name="FProfessionWork" ColumnName="FProfessionWork" />
+                <ScalarProperty Name="FProfessionCompany" ColumnName="FProfessionCompany" />
+                <ScalarProperty Name="FProfessionTele" ColumnName="FProfessionTele" />
+                <ScalarProperty Name="FAddressNow" ColumnName="FAddressNow" />
+                <ScalarProperty Name="FAddressTele" ColumnName="FAddressTele" />
+                <ScalarProperty Name="FChildrenName1" ColumnName="FChildrenName1" />
+                <ScalarProperty Name="FChildrenBirthDay1" ColumnName="FChildrenBirthDay1" />
+                <ScalarProperty Name="FChildrenBirthLink1" ColumnName="FChildrenBirthLink1" />
+                <ScalarProperty Name="FChildrenName2" ColumnName="FChildrenName2" />
+                <ScalarProperty Name="FChildrenBirthDay2" ColumnName="FChildrenBirthDay2" />
+                <ScalarProperty Name="FChildrenBirthLink2" ColumnName="FChildrenBirthLink2" />
+                <ScalarProperty Name="FChildrenName3" ColumnName="FChildrenName3" />
+                <ScalarProperty Name="FChildrenBirthDay3" ColumnName="FChildrenBirthDay3" />
+                <ScalarProperty Name="FChildrenBirthLink3" ColumnName="FChildrenBirthLink3" />
+                <ScalarProperty Name="FPurpose" ColumnName="FPurpose" />
+                <ScalarProperty Name="FVisitCompany" ColumnName="FVisitCompany" />
+                <ScalarProperty Name="FVisitnamName" ColumnName="FVisitnamName" />
+                <ScalarProperty Name="FVisitnamAddress" ColumnName="FVisitnamAddress" />
+                <ScalarProperty Name="FDurationBegin" ColumnName="FDurationBegin" />
+                <ScalarProperty Name="FDurationEnd" ColumnName="FDurationEnd" />
+                <ScalarProperty Name="FDurationDay" ColumnName="FDurationDay" />
+                <ScalarProperty Name="FTimes" ColumnName="FTimes" />
+                <ScalarProperty Name="TimesName" ColumnName="TimesName" />
+                <ScalarProperty Name="SpeedTypeName" ColumnName="SpeedTypeName" />
+                <ScalarProperty Name="DurationDayName" ColumnName="DurationDayName" />
+                <ScalarProperty Name="FSpeedType" ColumnName="FSpeedType" />
+                <ScalarProperty Name="FSysMemo" ColumnName="FSysMemo" />
+                <ScalarProperty Name="FCreateDate" ColumnName="FCreateDate" />
+                <ScalarProperty Name="FCreateCompany" ColumnName="FCreateCompany" />
+                <ScalarProperty Name="FCreateUser" ColumnName="FCreateUser" />
+                <ScalarProperty Name="FSysPut" ColumnName="FSysPut" />
+                <ScalarProperty Name="FSysPutDate" ColumnName="FSysPutDate" />
+                <ScalarProperty Name="FSysPutUser" ColumnName="FSysPutUser" />
+                <ScalarProperty Name="FSysSend" ColumnName="FSysSend" />
+                <ScalarProperty Name="FSysSendDate" ColumnName="FSysSendDate" />
+                <ScalarProperty Name="FSysSendUser" ColumnName="FSysSendUser" />
+                <ScalarProperty Name="FSysPrint" ColumnName="FSysPrint" />
+                <ScalarProperty Name="FSysPrintDate" ColumnName="FSysPrintDate" />
+                <ScalarProperty Name="FSysPrintUser" ColumnName="FSysPrintUser" />
+                <ScalarProperty Name="FSysChk" ColumnName="FSysChk" />
+                <ScalarProperty Name="FSysChkDate" ColumnName="FSysChkDate" />
+                <ScalarProperty Name="FSysChkUser" ColumnName="FSysChkUser" />
+                <ScalarProperty Name="FSysSure" ColumnName="FSysSure" />
+                <ScalarProperty Name="FSysSureDate" ColumnName="FSysSureDate" />
+                <ScalarProperty Name="FSysSureUser" ColumnName="FSysSureUser" />
+                <ScalarProperty Name="FModifyDate" ColumnName="FModifyDate" />
+                <ScalarProperty Name="FModifyUser" ColumnName="FModifyUser" />
+                <ScalarProperty Name="FStopSend" ColumnName="FStopSend" />
+                <ScalarProperty Name="FYNCom" ColumnName="FYNCom" />
+                <ScalarProperty Name="FsysZF" ColumnName="FsysZF" />
+                <ScalarProperty Name="FQZID" ColumnName="FQZID" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_SelectTbSubmit" FunctionName="visaModel.Store.sp_SelectTbSubmit">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="visaModel.sp_SelectTbSubmit_Result">
+                <ScalarProperty Name="STT" ColumnName="STT" />
+                <ScalarProperty Name="FName" ColumnName="FName" />
+                <ScalarProperty Name="FPassportNo" ColumnName="FPassportNo" />
+                <ScalarProperty Name="Times_1S" ColumnName="Times_1S" />
+                <ScalarProperty Name="Times_1M" ColumnName="Times_1M" />
+                <ScalarProperty Name="Times_3S" ColumnName="Times_3S" />
+                <ScalarProperty Name="Times_3M" ColumnName="Times_3M" />
+                <ScalarProperty Name="Times_6S" ColumnName="Times_6S" />
+                <ScalarProperty Name="Times_6M" ColumnName="Times_6M" />
+                <ScalarProperty Name="Times_Others" ColumnName="Times_Others" />
+                <ScalarProperty Name="Speed_ND" ColumnName="Speed_ND" />
+                <ScalarProperty Name="Speed_O" ColumnName="Speed_O" />
+                <ScalarProperty Name="Speed_NA" ColumnName="Speed_NA" />
+                <ScalarProperty Name="FID" ColumnName="FID" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_SelectPrintSendInfoBatch" FunctionName="visaModel.Store.sp_SelectPrintSendInfoBatch">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="visaModel.sp_SelectPrintSendInfoBatch_Result">
+                <ScalarProperty Name="Sele" ColumnName="Sele" />
+                <ScalarProperty Name="TT" ColumnName="TT" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="BirthDay" ColumnName="BirthDay" />
+                <ScalarProperty Name="FBirthDay" ColumnName="FBirthDay" />
+                <ScalarProperty Name="Sex" ColumnName="Sex" />
+                <ScalarProperty Name="FBirthNationlityEn" ColumnName="FBirthNationlityEn" />
+                <ScalarProperty Name="FBirthNationlityPresentEn" ColumnName="FBirthNationlityPresentEn" />
+                <ScalarProperty Name="FSysMemo" ColumnName="FSysMemo" />
+                <ScalarProperty Name="PID" ColumnName="PID" />
+                <ScalarProperty Name="Work" ColumnName="Work" />
+                <ScalarProperty Name="CQJDate" ColumnName="CQJDate" />
+                <ScalarProperty Name="TimesName" ColumnName="TimesName" />
+                <ScalarProperty Name="QID" ColumnName="QID" />
+                <ScalarProperty Name="Days" ColumnName="Days" />
+                <ScalarProperty Name="FTimes" ColumnName="FTimes" />
+                <ScalarProperty Name="FSysPut" ColumnName="FSysPut" />
+                <ScalarProperty Name="FSysSend" ColumnName="FSysSend" />
+                <ScalarProperty Name="FQZID" ColumnName="FQZID" />
+                <ScalarProperty Name="FDSN" ColumnName="FDSN" />
+                <ScalarProperty Name="FVID" ColumnName="FVID" />
+                <ScalarProperty Name="FCreateCompany" ColumnName="FCreateCompany" />
+                <ScalarProperty Name="PrintCount" ColumnName="PrintCount" />
+                <ScalarProperty Name="DDate" ColumnName="DDate" />
+                <ScalarProperty Name="PDate" ColumnName="PDate" />
+                <ScalarProperty Name="CType" ColumnName="CType" />
+                <ScalarProperty Name="MDate" ColumnName="MDate" />
+                <ScalarProperty Name="IDOrder" ColumnName="IDOrder" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_SelectTable1ForListName" FunctionName="visaModel.Store.sp_SelectTable1ForListName">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="visaModel.sp_SelectTable1ForListName_Result">
+                <ScalarProperty Name="FID" ColumnName="FID" />
+                <ScalarProperty Name="FNameEn" ColumnName="FNameEn" />
+                <ScalarProperty Name="FPassportNo" ColumnName="FPassportNo" />
+                <ScalarProperty Name="FAutoID" ColumnName="FAutoID" />
+                <ScalarProperty Name="FCreateDate" ColumnName="FCreateDate" />
+                <ScalarProperty Name="FSubmitNo" ColumnName="FSubmitNo" />
+                <ScalarProperty Name="FDSN" ColumnName="FDSN" />
+                <ScalarProperty Name="FQZID" ColumnName="FQZID" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_SelectPrintSendInfo" FunctionName="visaModel.Store.sp_SelectPrintSendInfo">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="visaModel.sp_SelectPrintSendInfo_Result">
+                <ScalarProperty Name="Sele" ColumnName="Sele" />
+                <ScalarProperty Name="FSelectItem" ColumnName="FSelectItem" />
+                <ScalarProperty Name="TT" ColumnName="TT" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="BirthDay" ColumnName="BirthDay" />
+                <ScalarProperty Name="FBirthDay" ColumnName="FBirthDay" />
+                <ScalarProperty Name="FSysMemo" ColumnName="FSysMemo" />
+                <ScalarProperty Name="Sex" ColumnName="Sex" />
+                <ScalarProperty Name="FBirthNationlityEn" ColumnName="FBirthNationlityEn" />
+                <ScalarProperty Name="FBirthNationlityPresentEn" ColumnName="FBirthNationlityPresentEn" />
+                <ScalarProperty Name="PID" ColumnName="PID" />
+                <ScalarProperty Name="Work" ColumnName="Work" />
+                <ScalarProperty Name="CQJDate" ColumnName="CQJDate" />
+                <ScalarProperty Name="TimesName" ColumnName="TimesName" />
+                <ScalarProperty Name="QID" ColumnName="QID" />
+                <ScalarProperty Name="Days" ColumnName="Days" />
+                <ScalarProperty Name="FTimes" ColumnName="FTimes" />
+                <ScalarProperty Name="FSysPut" ColumnName="FSysPut" />
+                <ScalarProperty Name="FSysSend" ColumnName="FSysSend" />
+                <ScalarProperty Name="FQZID" ColumnName="FQZID" />
+                <ScalarProperty Name="FDSN" ColumnName="FDSN" />
+                <ScalarProperty Name="FVID" ColumnName="FVID" />
+                <ScalarProperty Name="FCreateCompany" ColumnName="FCreateCompany" />
+                <ScalarProperty Name="PrintCount" ColumnName="PrintCount" />
+                <ScalarProperty Name="DDate" ColumnName="DDate" />
+                <ScalarProperty Name="PDate" ColumnName="PDate" />
+                <ScalarProperty Name="CType" ColumnName="CType" />
+                <ScalarProperty Name="MDate" ColumnName="MDate" />
+                <ScalarProperty Name="IDOrder" ColumnName="IDOrder" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_SelectTable3ForAdd" FunctionName="visaModel.Store.sp_SelectTable3ForAdd">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="visaModel.sp_SelectTable3ForAdd_Result">
+                <ScalarProperty Name="TT" ColumnName="TT" />
+                <ScalarProperty Name="FName" ColumnName="FName" />
+                <ScalarProperty Name="FNameEn" ColumnName="FNameEn" />
+                <ScalarProperty Name="FBirthDay" ColumnName="FBirthDay" />
+                <ScalarProperty Name="FSex" ColumnName="FSex" />
+                <ScalarProperty Name="FBirthNationlityEn" ColumnName="FBirthNationlityEn" />
+                <ScalarProperty Name="FBirthNationlityPresentEn" ColumnName="FBirthNationlityPresentEn" />
+                <ScalarProperty Name="FSysMemo" ColumnName="FSysMemo" />
+                <ScalarProperty Name="FPassportNo" ColumnName="FPassportNo" />
+                <ScalarProperty Name="FProfessionWork" ColumnName="FProfessionWork" />
+                <ScalarProperty Name="CQJDate" ColumnName="CQJDate" />
+                <ScalarProperty Name="TimesName" ColumnName="TimesName" />
+                <ScalarProperty Name="DurationName" ColumnName="DurationName" />
+                <ScalarProperty Name="FID" ColumnName="FID" />
+                <ScalarProperty Name="FAutoID" ColumnName="FAutoID" />
+                <ScalarProperty Name="FQZID" ColumnName="FQZID" />
+                <ScalarProperty Name="FSysSendDate" ColumnName="FSysSendDate" />
+                <ScalarProperty Name="FSysSendUser" ColumnName="FSysSendUser" />
+                <ScalarProperty Name="FYNCom" ColumnName="FYNCom" />
+                <ScalarProperty Name="FsysZF" ColumnName="FsysZF" />
+                <ScalarProperty Name="FStopSend" ColumnName="FStopSend" />
+                <ScalarProperty Name="FDurationDay" ColumnName="FDurationDay" />
+                <ScalarProperty Name="FPurpose" ColumnName="FPurpose" />
+                <ScalarProperty Name="FTimes" ColumnName="FTimes" />
+                <ScalarProperty Name="FSysPut" ColumnName="FSysPut" />
+                <ScalarProperty Name="FSysSend" ColumnName="FSysSend" />
+                <ScalarProperty Name="FCreateCompany" ColumnName="FCreateCompany" />
+                <ScalarProperty Name="FPassportValidDate" ColumnName="FPassportValidDate" />
+                <ScalarProperty Name="FDurationBegin" ColumnName="FDurationBegin" />
+                <ScalarProperty Name="FDurationEnd" ColumnName="FDurationEnd" />
+                <ScalarProperty Name="FOrder" ColumnName="FOrder" />
+                <ScalarProperty Name="iType" ColumnName="iType" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_SelectTable3ForExcel" FunctionName="visaModel.Store.sp_SelectTable3ForExcel">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="visaModel.sp_SelectTable3ForExcel_Result">
+                <ScalarProperty Name="Sele" ColumnName="Sele" />
+                <ScalarProperty Name="TT" ColumnName="TT" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="BirthDay" ColumnName="BirthDay" />
+                <ScalarProperty Name="Sex" ColumnName="Sex" />
+                <ScalarProperty Name="FBirthNationlityEn" ColumnName="FBirthNationlityEn" />
+                <ScalarProperty Name="FBirthNationlityPresentEn" ColumnName="FBirthNationlityPresentEn" />
+                <ScalarProperty Name="FSysMemo" ColumnName="FSysMemo" />
+                <ScalarProperty Name="PID" ColumnName="PID" />
+                <ScalarProperty Name="Work" ColumnName="Work" />
+                <ScalarProperty Name="CQJDate" ColumnName="CQJDate" />
+                <ScalarProperty Name="TimesName" ColumnName="TimesName" />
+                <ScalarProperty Name="QID" ColumnName="QID" />
+                <ScalarProperty Name="Days" ColumnName="Days" />
+                <ScalarProperty Name="FTimes" ColumnName="FTimes" />
+                <ScalarProperty Name="FSysPut" ColumnName="FSysPut" />
+                <ScalarProperty Name="FSysSend" ColumnName="FSysSend" />
+                <ScalarProperty Name="FPurpose" ColumnName="FPurpose" />
+                <ScalarProperty Name="FCreateCompany" ColumnName="FCreateCompany" />
+                <ScalarProperty Name="FPassportValidDate" ColumnName="FPassportValidDate" />
+                <ScalarProperty Name="SelectChk" ColumnName="SelectChk" />
+                <ScalarProperty Name="IDOrder" ColumnName="IDOrder" />
+                <ScalarProperty Name="iType" ColumnName="iType" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_SelectPrintSendInfoBatchByNumber" FunctionName="visaModel.Store.sp_SelectPrintSendInfoBatchByNumber">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="visaModel.sp_SelectPrintSendInfoBatchByNumber_Result">
+                <ScalarProperty Name="Sele" ColumnName="Sele" />
+                <ScalarProperty Name="TT" ColumnName="TT" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="BirthDay" ColumnName="BirthDay" />
+                <ScalarProperty Name="FBirthDay" ColumnName="FBirthDay" />
+                <ScalarProperty Name="Sex" ColumnName="Sex" />
+                <ScalarProperty Name="FBirthNationlityEn" ColumnName="FBirthNationlityEn" />
+                <ScalarProperty Name="FBirthNationlityPresentEn" ColumnName="FBirthNationlityPresentEn" />
+                <ScalarProperty Name="FSysMemo" ColumnName="FSysMemo" />
+                <ScalarProperty Name="PID" ColumnName="PID" />
+                <ScalarProperty Name="Work" ColumnName="Work" />
+                <ScalarProperty Name="CQJDate" ColumnName="CQJDate" />
+                <ScalarProperty Name="TimesName" ColumnName="TimesName" />
+                <ScalarProperty Name="QID" ColumnName="QID" />
+                <ScalarProperty Name="Days" ColumnName="Days" />
+                <ScalarProperty Name="FTimes" ColumnName="FTimes" />
+                <ScalarProperty Name="FSysPut" ColumnName="FSysPut" />
+                <ScalarProperty Name="FSysSend" ColumnName="FSysSend" />
+                <ScalarProperty Name="FQZID" ColumnName="FQZID" />
+                <ScalarProperty Name="FDSN" ColumnName="FDSN" />
+                <ScalarProperty Name="FVID" ColumnName="FVID" />
+                <ScalarProperty Name="FCreateCompany" ColumnName="FCreateCompany" />
+                <ScalarProperty Name="PrintCount" ColumnName="PrintCount" />
+                <ScalarProperty Name="DDate" ColumnName="DDate" />
+                <ScalarProperty Name="PDate" ColumnName="PDate" />
+                <ScalarProperty Name="CType" ColumnName="CType" />
+                <ScalarProperty Name="MDate" ColumnName="MDate" />
+                <ScalarProperty Name="IDOrder" ColumnName="IDOrder" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <EntitySetMapping Name="TB_TableSubmit">
+            <EntityTypeMapping TypeName="visaModel.TB_TableSubmit">
+              <MappingFragment StoreEntitySet="TB_TableSubmit">
+                <ScalarProperty Name="FSysMemo" ColumnName="FSysMemo" />
+                <ScalarProperty Name="FStatus" ColumnName="FStatus" />
+                <ScalarProperty Name="FModifyUser" ColumnName="FModifyUser" />
+                <ScalarProperty Name="FModifyDate" ColumnName="FModifyDate" />
+                <ScalarProperty Name="FCreateUser" ColumnName="FCreateUser" />
+                <ScalarProperty Name="FCreateDate" ColumnName="FCreateDate" />
+                <ScalarProperty Name="FCompany" ColumnName="FCompany" />
+                <ScalarProperty Name="FCDate" ColumnName="FCDate" />
+                <ScalarProperty Name="FAutoID" ColumnName="FAutoID" />
+                <ScalarProperty Name="FSubmitNo" ColumnName="FSubmitNo" />
+                <ScalarProperty Name="FID" ColumnName="FID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="sp_SelectTbSubmitWithSubmitNo" FunctionName="visaModel.Store.sp_SelectTbSubmitWithSubmitNo">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="visaModel.sp_SelectTbSubmitWithSubmitNo_Result">
+                <ScalarProperty Name="STT" ColumnName="STT" />
+                <ScalarProperty Name="FName" ColumnName="FName" />
+                <ScalarProperty Name="FPassportNo" ColumnName="FPassportNo" />
+                <ScalarProperty Name="Times_1S" ColumnName="Times_1S" />
+                <ScalarProperty Name="Times_3S" ColumnName="Times_3S" />
+                <ScalarProperty Name="Times_6S" ColumnName="Times_6S" />
+                <ScalarProperty Name="Times_1M" ColumnName="Times_1M" />
+                <ScalarProperty Name="Times_3M" ColumnName="Times_3M" />
+                <ScalarProperty Name="Times_6M" ColumnName="Times_6M" />
+                <ScalarProperty Name="Times_Others" ColumnName="Times_Others" />
+                <ScalarProperty Name="Speed_ND" ColumnName="Speed_ND" />
+                <ScalarProperty Name="Speed_O" ColumnName="Speed_O" />
+                <ScalarProperty Name="Speed_NA" ColumnName="Speed_NA" />
+                <ScalarProperty Name="FID" ColumnName="FID" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="默认值" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

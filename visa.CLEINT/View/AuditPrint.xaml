@@ -1,0 +1,142 @@
+﻿<UserControl xmlns:dxg="http://schemas.devexpress.com/winfx/2008/xaml/grid"  xmlns:dxlc="http://schemas.devexpress.com/winfx/2008/xaml/layoutcontrol"  xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:dxp="http://schemas.devexpress.com/winfx/2008/xaml/printing"  
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:dxe="http://schemas.devexpress.com/winfx/2008/xaml/editors"  x:Class="visa.CLEINT.View.AuditPrint" 
+      xmlns:dxb="http://schemas.devexpress.com/winfx/2008/xaml/bars"
+           mc:Ignorable="d" >
+
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/Style/StyleEdit.xaml" />
+                <ResourceDictionary Source="/Style/StyleBar.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </UserControl.Resources>
+
+    <Grid>
+        <TabControl Grid.Row="0"  SelectionChanged="MainTab_SelectionChanged"  x:Name="MainTab" Margin="0,0,0,0">
+            <TabItem Header="选择签证">
+
+                <Grid >
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="30"/>
+                        <RowDefinition Height="50"/>
+                        <RowDefinition Height="40"/>
+                        <RowDefinition Height="100"/>
+                        <RowDefinition />
+                    </Grid.RowDefinitions>
+                    <dxb:BarManager Grid.Row="0" x:Name="MainBar"  BarsSource="{Binding viewModel.Bars}" BarTemplate="{StaticResource barTemplate}" BarStyle="{StaticResource barStyle}" AllowCustomization="False"   AllowHotCustomization="False" AllowQuickCustomization="False" AllowUIAutomationSupport="False">
+                    </dxb:BarManager>
+
+                    <Grid Grid.Row="1">
+                        <TextBlock HorizontalAlignment="Left" Margin="22,17,0,0" TextWrapping="Wrap" Text="已发送未打印" VerticalAlignment="Top"/>
+                        <dxe:ComboBoxEdit IsTextEditable="False"  SelectedIndexChanged="cbNotPrint_SelectedIndexChanged"  Name="cbNotPrint"  HorizontalAlignment="Left" Margin="136,17,0,0" VerticalAlignment="Top" Width="141"/>
+                        <TextBlock HorizontalAlignment="Left" Margin="310,20,0,0" TextWrapping="Wrap" Text="补打签证护照号" VerticalAlignment="Top"/>
+                        <TextBlock HorizontalAlignment="Left" Margin="604,20,0,0" TextWrapping="Wrap" Text="批量补打签证审批单号" VerticalAlignment="Top"/>
+                    </Grid>
+                    <dxe:TextEdit KeyDown="txtPassportNo_KeyDown_1"  Name="txtPassportNo"   HorizontalAlignment="Left" Margin="413,18,0,0" Grid.Row="1" VerticalAlignment="Top" Width="150"/>
+                    <dxe:TextEdit KeyDown="txtSendNO_KeyDown"  Name="txtSendNO"  HorizontalAlignment="Left" Margin="742,18,0,0" Grid.Row="1" VerticalAlignment="Top" Width="150"/>
+
+                    <Grid Grid.Row="2">
+                        <TextBlock Foreground="#f00"  HorizontalAlignment="Left" Margin="33,14,0,0" TextWrapping="Wrap" Text="签证套打说明: 先选择要打印的签证，点击打印(可以先预览),打印完成后，设置签证号码，保存签证号码，最后生成签证打印报告" VerticalAlignment="Top"/>
+
+
+
+                    </Grid>
+                    <Grid Grid.Row="3">
+                        <TextBlock HorizontalAlignment="Left" Margin="34,21,0,0" TextWrapping="Wrap" Text="签证打印-职位" VerticalAlignment="Top"/>
+                        <TextBlock HorizontalAlignment="Left" Margin="311,21,0,0" TextWrapping="Wrap" Text="签证打印-签证人" VerticalAlignment="Top"/>
+                        <TextBlock HorizontalAlignment="Left" Margin="603,23,0,0" TextWrapping="Wrap" Text="签证打印-日期" VerticalAlignment="Top" RenderTransformOrigin="3.766,0.562"/>
+                        <TextBlock HorizontalAlignment="Left" Margin="34,62,0,0" TextWrapping="Wrap" Text="签证打印-备注" VerticalAlignment="Top"/>
+                        <dxe:TextEdit Name="txtMemo"  HorizontalAlignment="Left" Margin="137,62,0,0" VerticalAlignment="Top" Width="700"/>
+                        <dxe:ComboBoxEdit SelectedIndexChanged="cbAuditPosition_SelectedIndexChanged"  IsTextEditable="False"  Name="cbAuditPosition"  HorizontalAlignment="Left" Margin="137,20,0,0" VerticalAlignment="Top" Width="150"/>
+                        <dxe:ComboBoxEdit SelectedIndexChanged="cbAuditPerson_SelectedIndexChanged"  IsTextEditable="False"  Name="cbAuditPerson"  HorizontalAlignment="Left" Margin="422,19,0,0" VerticalAlignment="Top" Width="150"/>
+                        <dxe:DateEdit Name="datePassportMakeDay"  HorizontalAlignment="Left" Margin="701,21,0,0" VerticalAlignment="Top" Width="150"/>
+                    </Grid>
+                    <Grid Grid.Row="4">
+                        <dxg:GridControl SelectionMode="Row"   Name="gridMain" ItemsSource="{Binding sendCollection}" SelectedItem="{Binding CurrentItem}"  AutoGenerateColumns="None"   >
+                            <dxg:GridControl.Columns>
+                                <dxg:GridColumn Width="50"   FieldName="FSelectItem" Header="选择" >
+                                    <dxg:GridColumn.EditSettings>
+                                        <dxe:CheckEditSettings>
+                                        </dxe:CheckEditSettings>
+                                    </dxg:GridColumn.EditSettings>
+                                </dxg:GridColumn>
+                                <dxg:GridColumn  Width="50"  Binding="{Binding TT}" Header="TT" />
+                                <dxg:GridColumn  Width="120"  FieldName="FQZID" Header="签证号码" >
+                                    <dxg:GridColumn.CellTemplate>
+                                        <DataTemplate>
+                                            <StackPanel>
+                                                <Grid>
+                                                    <Grid.ColumnDefinitions>
+                                                        <ColumnDefinition Width="*"></ColumnDefinition>
+                                                        <ColumnDefinition Width="20"></ColumnDefinition>
+                                                    </Grid.ColumnDefinitions>
+                                                    <TextBox Grid.Column="0" Text="{Binding RowData.Row.FQZID}" BorderThickness="0"></TextBox>
+                                                    <Image Grid.Column="1" Source="../Resources/save.png" Cursor="Hand" Width="20" MouseLeftButtonUp="Image_MouseLeftButtonUp"></Image>
+                                                </Grid>
+                                            </StackPanel>
+                                        </DataTemplate>
+                                    </dxg:GridColumn.CellTemplate>
+                                </dxg:GridColumn>
+                                <dxg:GridColumn  Width="60"  Binding="{Binding PrintCount}" Header="打印次数" />
+                                <dxg:GridColumn   Width="100" Binding="{Binding Name}" Header="姓名" />
+                                <dxg:GridColumn   Width="100" Binding="{Binding BirthDay}"  Header="生日" >
+                                    <dxg:GridColumn.EditSettings>
+                                        <dxe:TextEditSettings Mask="yyyy-MM-dd" MaskType="DateTime" MaskUseAsDisplayFormat="True"/>
+                                    </dxg:GridColumn.EditSettings>
+                                </dxg:GridColumn>
+                                <dxg:GridColumn   Width="80" Binding="{Binding Sex}" Header="性别" />
+                                <dxg:GridColumn   Width="120" Binding="{Binding FBirthNationlityEn}" Header="原来国籍" />
+                                <dxg:GridColumn   Width="120" Binding="{Binding FBirthNationlityPresentEn}" Header="现在国籍" />
+                                <dxg:GridColumn   Width="120" Binding="{Binding PID}" Header="护照号码" />
+                                <dxg:GridColumn   Width="120" Binding="{Binding Ctype}" Header="出境目的" />
+                                <dxg:GridColumn   Width="120" Binding="{Binding Work}" Header="职业" />
+                                <dxg:GridColumn   Width="120" Binding="{Binding DDate}" Header="出境日期" >
+                                    <dxg:GridColumn.EditSettings>
+                                        <dxe:TextEditSettings Mask="yyyy-MM-dd" MaskType="DateTime" MaskUseAsDisplayFormat="True"/>
+                                    </dxg:GridColumn.EditSettings>
+                                </dxg:GridColumn>
+                                <dxg:GridColumn   Width="120" Binding="{Binding TimesName}" Header="次数" />
+                            </dxg:GridControl.Columns>
+                            <dxg:GridControl.View>
+                                <dxg:TableView  ShowTotalSummary="True" ShowGroupPanel="False"/>
+                            </dxg:GridControl.View>
+                        </dxg:GridControl>
+
+
+                    </Grid>
+
+
+                </Grid>
+
+            </TabItem>
+            <TabItem Header="打印预览">
+
+                <Grid >
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="40"/>
+                        <RowDefinition />
+                    </Grid.RowDefinitions>
+                    <Grid Grid.Row="0">
+                        <RadioButton Click="rbPosition1_Click"   Name="rbPosition1" GroupName="SetStyle"  Content="贴纸" IsChecked="True"  HorizontalAlignment="Left" Margin="27,13,0,0" VerticalAlignment="Top"/>
+                        <RadioButton Click="rbPosition2_Click"  Name="rbPosition2" GroupName="SetStyle"  Content="另纸" HorizontalAlignment="Left" Margin="264,14,0,0" VerticalAlignment="Top"/>
+                        <Button Name="btnStyle1" Click="btnStyle1_Click"  Content="设置详细位置" HorizontalAlignment="Left" Margin="93,9,0,0" VerticalAlignment="Top" Width="120"/>
+                        <Button Name="btnStyle2" Click="btnStyle2_Click"  Content="设置详细位置" HorizontalAlignment="Left" Margin="334,11,0,0" VerticalAlignment="Top" Width="120"/>
+                        <dxe:CheckEdit x:Name="cbShowVisaCode"   EditValueChanged="CheckEdit_EditValueChanged" IsChecked="False"  Margin="535,3,0,-3" Content="显示签证码" />
+                    </Grid>
+                    <dxp:DocumentPreview Grid.Row="1"   Name="MainPreview" />
+
+                </Grid>
+
+            </TabItem>
+
+
+
+        </TabControl>
+    </Grid>
+</UserControl>

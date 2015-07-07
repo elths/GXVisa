@@ -1,0 +1,54 @@
+﻿<UserControl
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:dxb="http://schemas.devexpress.com/winfx/2008/xaml/bars"
+             xmlns:dxg="http://schemas.devexpress.com/winfx/2008/xaml/grid" xmlns:dxe="http://schemas.devexpress.com/winfx/2008/xaml/editors" x:Class="visa.CLEINT.View.AuditUser"
+             mc:Ignorable="d" Height="650" Width="750" >
+
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/Style/StyleEdit.xaml" />
+                <ResourceDictionary Source="/Style/StyleBar.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </UserControl.Resources>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30" />
+            <RowDefinition Height="50" />
+            <RowDefinition  />
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0" Height="30" VerticalAlignment="Top">
+            <dxb:BarManager   Name="MainBar"  BarsSource="{Binding Bars}" BarTemplate="{StaticResource barTemplate}" BarStyle="{StaticResource barStyle}" AllowCustomization="False"   AllowHotCustomization="False" AllowQuickCustomization="False" AllowUIAutomationSupport="False"/>
+
+        </Grid>
+        <Grid Name="EditGrid"  Grid.Row="1">
+            <TextBlock HorizontalAlignment="Left" Margin="18,22,0,0" Grid.Row="1" TextWrapping="Wrap" Text="姓名" VerticalAlignment="Top"/>
+
+
+            <dxe:TextEdit Validate="EmptyValidate" InvalidValueBehavior="AllowLeaveEditor"  Name="txtFullName"  Text="{Binding FName}"  HorizontalAlignment="Left" Margin="75,18,0,0" Grid.Row="1" VerticalAlignment="Top" Width="164"/>
+            <TextBlock HorizontalAlignment="Left" Margin="292,22,0,0" Grid.Row="1" TextWrapping="Wrap" Text="排序" VerticalAlignment="Top"/>
+            <dxe:TextEdit   MaskType="Numeric"
+     Mask="d"  Validate="EmptyValidate" InvalidValueBehavior="AllowLeaveEditor" Name="txtShortName"  Text="{Binding FOrder}" HorizontalAlignment="Left" Margin="344,20,0,0" Grid.Row="1" VerticalAlignment="Top" Width="164"/>
+
+        </Grid>
+
+        <dxg:GridControl SelectedItemChanged="MainGrid_SelectedItemChanged"  Name="MainGrid" ItemsSource="{Binding}"  AutoGenerateColumns="None" Grid.Row="2" Margin="0,0,0,0">
+            <dxg:GridControl.Columns>
+                <dxg:GridColumn Width="200"   FieldName="FName" Header="姓名" />
+                <dxg:GridColumn   Width="80" FieldName="FOrder" Header="排序" />
+            </dxg:GridControl.Columns>
+
+            <dxg:GridControl.View>
+                <dxg:TableView AllowEditing="False"  ShowTotalSummary="True" ShowGroupPanel="False"/>
+            </dxg:GridControl.View>
+        </dxg:GridControl>
+
+
+    </Grid>
+</UserControl>

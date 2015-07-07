@@ -1,0 +1,33 @@
+﻿<UserControl x:Class="visa.CLEINT.View.Report4"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:dxp="http://schemas.devexpress.com/winfx/2008/xaml/printing"  
+             xmlns:dxg="http://schemas.devexpress.com/winfx/2008/xaml/grid" 
+             xmlns:dxe="http://schemas.devexpress.com/winfx/2008/xaml/editors"
+             mc:Ignorable="d" 
+             d:DesignHeight="800" d:DesignWidth="800">
+    <TabControl x:Name="MainTab" Margin="0,-0,-0,0">
+        <TabItem Header="打印/导出签证格式四">
+
+            <Grid>
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="80"/>
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+                <Grid Grid.Row="0">
+                    <TextBlock HorizontalAlignment="Left" Margin="111,16,0,0" TextWrapping="Wrap" Text="选择签证名单:" VerticalAlignment="Top"/>
+                    <dxe:ComboBoxEdit IsTextEditable="False"  Name="cbSendNo" SelectedIndexChanged="cbSendNo_SelectedIndexChanged"  HorizontalAlignment="Left" Margin="203,14,0,0" VerticalAlignment="Top" Width="150"/>
+                    <Button Content="显示所有历史单号" HorizontalAlignment="Left" Margin="380,14,0,0" VerticalAlignment="Top" Width="134" Click="Button_Click"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="110,46,0,0" TextWrapping="Wrap" Text="设置报表标题:" VerticalAlignment="Top"/>
+                    <dxe:TextEdit Text="表格四"  Name="txtReportTitle"  HorizontalAlignment="Left" Margin="203,43,0,0" VerticalAlignment="Top" Width="150"/>
+                    <Button Content="导出EXCEL" HorizontalAlignment="Left" Margin="530,14,0,0" VerticalAlignment="Top" Width="117"/>
+                </Grid>
+                <Grid Grid.Row="1">
+                    <dxp:DocumentPreview Name="MainPreview" />
+                </Grid>
+            </Grid>
+        </TabItem>
+    </TabControl></UserControl>

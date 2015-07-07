@@ -1,0 +1,465 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="EditorStringId.Cancel" xml:space="preserve">
+    <value>取消</value>
+  </data>
+  <data name="EditorStringId.Clear" xml:space="preserve">
+    <value>清除</value>
+  </data>
+  <data name="EditorStringId.Today" xml:space="preserve">
+    <value>今天</value>
+  </data>
+  <data name="EditorStringId.OK" xml:space="preserve">
+    <value>确定</value>
+  </data>
+  <data name="EditorStringId.Apply" xml:space="preserve">
+    <value>应用</value>
+  </data>
+  <data name="EditorStringId.Yes" xml:space="preserve">
+    <value>是</value>
+  </data>
+  <data name="EditorStringId.No" xml:space="preserve">
+    <value>否</value>
+  </data>
+  <data name="EditorStringId.SelectAll" xml:space="preserve">
+    <value>(全选)</value>
+  </data>
+  <data name="EditorStringId.FilterCriteriaToStringBetween" xml:space="preserve">
+    <value>之间</value>
+  </data>
+  <data name="EditorStringId.FilterCriteriaToStringIn" xml:space="preserve">
+    <value>在</value>
+  </data>
+  <data name="EditorStringId.FilterCriteriaToStringIsNotNull" xml:space="preserve">
+    <value>不在</value>
+  </data>
+  <data name="EditorStringId.FilterCriteriaToStringNotLike" xml:space="preserve">
+    <value>不包含</value>
+  </data>
+  <data name="EditorStringId.FilterCriteriaToStringBinaryOperatorBitwiseAnd" xml:space="preserve">
+    <value>而且</value>
+  </data>
+  <data name="EditorStringId.FilterCriteriaToStringBinaryOperatorBitwiseOr" xml:space="preserve">
+    <value>或者</value>
+  </data>
+  <data name="EditorStringId.FilterCriteriaToStringBinaryOperatorBitwiseXor" xml:space="preserve">
+    <value>异或</value>
+  </data>
+  <data name="EditorStringId.FilterCriteriaToStringBinaryOperatorDivide" xml:space="preserve">
+    <value>除</value>
+  </data>
+  <data name="EditorStringId.FilterCriteriaToStringBinaryOperatorEqual" xml:space="preserve">
+    <value>等于</value>
+  </data>
+  <data name="EditorStringId.FilterCriteriaToStringBinaryOperatorGreater" xml:space="preserve">
+    <value>大于</value>
+  </data>
+  <data name="EditorStringId.FilterCriteriaToStringBinaryOperatorGreaterOrEqual" xml:space="preserve">
+    <value>大于等于</value>
+  </data>
+  <data name="EditorStringId.FilterCriteriaToStringBinaryOperatorLess" xml:space="preserve">
+    <value>小于</value>
+  </data>
+  <data name="EditorStringId.FilterCriteriaToStringBinaryOperatorLessOrEqual" xml:space="preserve">
+    <value>小于等于</value>
+  </data>
+  <data name="EditorStringId.FilterCriteriaToStringBinaryOperatorLike" xml:space="preserve">
+    <value>包含</value>
+  </data>
+  <data name="EditorStringId.FilterCriteriaToStringBinaryOperatorMinus" xml:space="preserve">
+    <value>减</value>
+  </data>
+  <data name="EditorStringId.FilterCriteriaToStringBinaryOperatorModulo" xml:space="preserve">
+    <value>取模</value>
+  </data>
+  <data name="EditorStringId.FilterCriteriaToStringBinaryOperatorMultiply" xml:space="preserve">
+    <value>乘</value>
+  </data>
+  <data name="EditorStringId.FilterCriteriaToStringBinaryOperatorNotEqual" xml:space="preserve">
+    <value>不等于</value>
+  </data>
+  <data name="EditorStringId.FilterCriteriaToStringBinaryOperatorPlus" xml:space="preserve">
+    <value>加</value>
+  </data>
+  <data name="EditorStringId.FilterCriteriaToStringUnaryOperatorBitwiseNot" xml:space="preserve">
+    <value>非</value>
+  </data>
+  <data name="EditorStringId.FilterCriteriaToStringUnaryOperatorIsNull" xml:space="preserve">
+    <value>为空</value>
+  </data>
+  <data name="EditorStringId.FilterCriteriaToStringUnaryOperatorMinus" xml:space="preserve">
+    <value>减</value>
+  </data>
+  <data name="EditorStringId.FilterCriteriaToStringUnaryOperatorNot" xml:space="preserve">
+    <value>否</value>
+  </data>
+  <data name="EditorStringId.FilterCriteriaToStringUnaryOperatorPlus" xml:space="preserve">
+    <value>加</value>
+  </data>
+  <data name="EditorStringId.FilterCriteriaToStringGroupOperatorAnd" xml:space="preserve">
+    <value>而且</value>
+  </data>
+  <data name="EditorStringId.FilterCriteriaToStringGroupOperatorOr" xml:space="preserve">
+    <value>或者</value>
+  </data>
+  <data name="EditorStringId.ExpressionEditor_Functions_Text" xml:space="preserve">
+    <value>函数</value>
+  </data>
+  <data name="EditorStringId.ExpressionEditor_Operators_Text" xml:space="preserve">
+    <value>操作符</value>
+  </data>
+  <data name="EditorStringId.ExpressionEditor_Fields_Text" xml:space="preserve">
+    <value>字段</value>
+  </data>
+  <data name="EditorStringId.ExpressionEditor_Constants_Text" xml:space="preserve">
+    <value>常量</value>
+  </data>
+  <data name="EditorStringId.ExpressionEditor_FunctionType_AllItems" xml:space="preserve">
+    <value>(所有)</value>
+  </data>
+  <data name="EditorStringId.CaptionError" xml:space="preserve">
+    <value>错误</value>
+  </data>
+  <data name="EditorStringId.CalculatorButtonAdd" xml:space="preserve">
+    <value>加</value>
+  </data>
+  <data name="EditorStringId.CalculatorButtonSub" xml:space="preserve">
+    <value>减</value>
+  </data>
+  <data name="EditorStringId.CalculatorButtonMul" xml:space="preserve">
+    <value>乘</value>
+  </data>
+  <data name="EditorStringId.CalculatorButtonDiv" xml:space="preserve">
+    <value>除</value>
+  </data>
+  <data name="EditorStringId.CalculatorButtonPercent" xml:space="preserve">
+    <value>取模</value>
+  </data>
+  <data name="EditorStringId.CalculatorButtonEqual" xml:space="preserve">
+    <value>等于</value>
+  </data>
+  <data name="EditorStringId.CalculatorDivisionByZeroError" xml:space="preserve">
+    <value>不能除以零</value>
+  </data>
+  <data name="EditorStringId.CalculatorError" xml:space="preserve">
+    <value>错误</value>
+  </data>
+  <data name="EditorStringId.CalculatorInvalidInputError" xml:space="preserve">
+    <value>输入无效</value>
+  </data>
+  <data name="EditorStringId.FilterCriteriaInvalidExpression" xml:space="preserve">
+    <value>表达式语法无效 (行 {0}, 字符 {1}).</value>
+  </data>
+  <data name="EditorStringId.FilterCriteriaInvalidExpressionEx" xml:space="preserve">
+    <value>表达式无效</value>
+  </data>
+  <data name="EditorStringId.ExpressionEditor_Title" xml:space="preserve">
+    <value>表达式编辑器</value>
+  </data>
+  <data name="EditorStringId.FilterGroupAnd" xml:space="preserve">
+    <value>而且</value>
+  </data>
+  <data name="EditorStringId.FilterGroupOr" xml:space="preserve">
+    <value>或者</value>
+  </data>
+  <data name="EditorStringId.FilterGroupNotAnd" xml:space="preserve">
+    <value>非而且</value>
+  </data>
+  <data name="EditorStringId.FilterGroupNotOr" xml:space="preserve">
+    <value>非或者</value>
+  </data>
+  <data name="EditorStringId.FilterGroupAddCondition" xml:space="preserve">
+    <value>添加条件</value>
+  </data>
+  <data name="EditorStringId.FilterGroupAddGroup" xml:space="preserve">
+    <value>添加分组</value>
+  </data>
+  <data name="EditorStringId.FilterGroupRemoveGroup" xml:space="preserve">
+    <value>删除分组</value>
+  </data>
+  <data name="EditorStringId.FilterGroupClearAll" xml:space="preserve">
+    <value>清除所有</value>
+  </data>
+  <data name="EditorStringId.FilterClauseAnyOf" xml:space="preserve">
+    <value>任何一个</value>
+  </data>
+  <data name="EditorStringId.FilterClauseBeginsWith" xml:space="preserve">
+    <value>开始于</value>
+  </data>
+  <data name="EditorStringId.FilterClauseBetween" xml:space="preserve">
+    <value>在之间</value>
+  </data>
+  <data name="EditorStringId.FilterClauseBetweenAnd" xml:space="preserve">
+    <value>而且</value>
+  </data>
+  <data name="EditorStringId.FilterClauseContains" xml:space="preserve">
+    <value>包含</value>
+  </data>
+  <data name="EditorStringId.FilterClauseEndsWith" xml:space="preserve">
+    <value>结束于</value>
+  </data>
+  <data name="EditorStringId.FilterClauseEquals" xml:space="preserve">
+    <value>等于</value>
+  </data>
+  <data name="EditorStringId.FilterClauseGreater" xml:space="preserve">
+    <value>大于</value>
+  </data>
+  <data name="EditorStringId.FilterClauseGreaterOrEqual" xml:space="preserve">
+    <value>大于等于</value>
+  </data>
+  <data name="EditorStringId.FilterClauseIsNotNull" xml:space="preserve">
+    <value>不为空</value>
+  </data>
+  <data name="EditorStringId.FilterClauseIsNull" xml:space="preserve">
+    <value>为空</value>
+  </data>
+  <data name="EditorStringId.FilterClauseLess" xml:space="preserve">
+    <value>小于</value>
+  </data>
+  <data name="EditorStringId.FilterClauseLessOrEqual" xml:space="preserve">
+    <value>小于等于</value>
+  </data>
+  <data name="EditorStringId.FilterClauseLike" xml:space="preserve">
+    <value>相似于</value>
+  </data>
+  <data name="EditorStringId.FilterClauseNoneOf" xml:space="preserve">
+    <value>一个也没有</value>
+  </data>
+  <data name="EditorStringId.FilterClauseNotBetween" xml:space="preserve">
+    <value>不在之间</value>
+  </data>
+  <data name="EditorStringId.FilterClauseDoesNotContain" xml:space="preserve">
+    <value>不包含</value>
+  </data>
+  <data name="EditorStringId.FilterClauseDoesNotEqual" xml:space="preserve">
+    <value>不等于</value>
+  </data>
+  <data name="EditorStringId.FilterClauseNotLike" xml:space="preserve">
+    <value>不相似于</value>
+  </data>
+  <data name="EditorStringId.FilterEmptyValueText" xml:space="preserve">
+    <value>输入一个值</value>
+  </data>
+  <data name="EditorStringId.FilterClauseIsNullOrEmpty" xml:space="preserve">
+    <value>为空格</value>
+  </data>
+  <data name="EditorStringId.FilterClauseIsNotNullOrEmpty" xml:space="preserve">
+    <value>不为空格</value>
+  </data>
+  <data name="EditorStringId.FilterClauseIsNextWeek" xml:space="preserve">
+    <value>下周</value>
+  </data>
+  <data name="EditorStringId.FilterClauseIsTomorrow" xml:space="preserve">
+    <value>明天</value>
+  </data>
+  <data name="EditorStringId.FilterClauseIsToday" xml:space="preserve">
+    <value>今天</value>
+  </data>
+  <data name="EditorStringId.FilterClauseIsYesterday" xml:space="preserve">
+    <value>昨天</value>
+  </data>
+  <data name="EditorStringId.FilterToolTipNodeAction" xml:space="preserve">
+    <value>操作</value>
+  </data>
+  <data name="EditorStringId.FilterToolTipNodeAdd" xml:space="preserve">
+    <value>增加一个新的条件到分组</value>
+  </data>
+  <data name="EditorStringId.FilterToolTipNodeRemove" xml:space="preserve">
+    <value>删除条件</value>
+  </data>
+  <data name="EditorStringId.FilterToolTipElementAdd" xml:space="preserve">
+    <value>增加一个新项到列表</value>
+  </data>
+  <data name="EditorStringId.FilterPanelEditFilter" xml:space="preserve">
+    <value>编译过滤</value>
+  </data>
+  <data name="EditorStringId.FilterPanelClearFilter" xml:space="preserve">
+    <value>清除过滤</value>
+  </data>
+  <data name="EditorStringId.FilterPanelEnableFilter" xml:space="preserve">
+    <value>开启过滤</value>
+  </data>
+  <data name="EditorStringId.FilterPanelDisableFilter" xml:space="preserve">
+    <value>禁止过滤</value>
+  </data>
+  <data name="EditorStringId.ColorEdit_AutomaticButtonCaption" xml:space="preserve">
+    <value>自动</value>
+  </data>
+  <data name="EditorStringId.ColorEdit_ColorChooserWindowTitle" xml:space="preserve">
+    <value>颜色</value>
+  </data>
+  <data name="EditorStringId.ColorEdit_MoreColorsButtonCaption" xml:space="preserve">
+    <value>更多颜色</value>
+  </data>
+  <data name="EditorStringId.ColorEdit_NoColorButtonCaption" xml:space="preserve">
+    <value>没有颜色</value>
+  </data>
+  <data name="EditorStringId.ColorEdit_RecentColorsCaption" xml:space="preserve">
+    <value>最近使用的颜色</value>
+  </data>
+  <data name="EditorStringId.ColorEdit_ThemeColorsCaption" xml:space="preserve">
+    <value>风格颜色</value>
+  </data>
+  <data name="EditorStringId.ColorEdit_StandardColorsCaption" xml:space="preserve">
+    <value>标准颜色</value>
+  </data>
+  <data name="EditorStringId.Copy" xml:space="preserve">
+    <value>复制</value>
+  </data>
+  <data name="EditorStringId.Cut" xml:space="preserve">
+    <value>剪切</value>
+  </data>
+  <data name="EditorStringId.ImageEdit_InvalidFormatMessage" xml:space="preserve">
+    <value>错误的图片格式</value>
+  </data>
+  <data name="EditorStringId.Open" xml:space="preserve">
+    <value>打开</value>
+  </data>
+  <data name="EditorStringId.Paste" xml:space="preserve">
+    <value>粘贴</value>
+  </data>
+  <data name="EditorStringId.Save" xml:space="preserve">
+    <value>保存</value>
+  </data>
+  <data name="EditorStringId.OutOfRange" xml:space="preserve">
+    <value>超出范围</value>
+  </data>
+  <data name="EditorStringId.MaskIncomplete" xml:space="preserve">
+    <value>标识不完整</value>
+  </data>
+  <data name="EditorStringId.PasswordBoxEditToolTipHeader" xml:space="preserve">
+    <value>大写锁定</value>
+  </data>
+  <data name="EditorStringId.Page" xml:space="preserve">
+    <value>页</value>
+  </data>
+  <data name="EditorStringId.WaitIndicatorText" xml:space="preserve">
+    <value>载入中...</value>
+  </data>
+  <data name="EditorStringId.LookUpFind" xml:space="preserve">
+    <value>查找</value>
+  </data>
+  <data name="EditorStringId.LookUpAddNew" xml:space="preserve">
+    <value>新增</value>
+  </data>
+  <data name="EditorStringId.SetNullValue" xml:space="preserve">
+    <value>清除</value>
+  </data>
+</root>

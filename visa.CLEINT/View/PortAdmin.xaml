@@ -1,0 +1,22 @@
+﻿<UserControl
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:dxe="http://schemas.devexpress.com/winfx/2008/xaml/editors" x:Class="visa.CLEINT.View.PortAdmin" 
+             mc:Ignorable="d" 
+             d:DesignHeight="650" d:DesignWidth="750">
+    <Grid>
+        <TextBlock HorizontalAlignment="Left" Margin="94,155,0,0" TextWrapping="Wrap" Text="COM口:" VerticalAlignment="Top"/>
+
+        <dxe:TextEdit 
+     MaskType="Numeric"
+     Mask="d"  Name="txtPort"   HorizontalAlignment="Left" Margin="169,151,0,0" VerticalAlignment="Top" Width="150"/>
+        <TextBlock HorizontalAlignment="Left" Margin="376,155,0,0" TextWrapping="Wrap" Text="协议号(默认为2)" VerticalAlignment="Top"/>
+        <dxe:TextEdit x:Name="txtProtocol" 
+     MaskType="Numeric"
+     Mask="d"  HorizontalAlignment="Left" Margin="484,152,0,0" VerticalAlignment="Top" Width="150"/>
+        <Button Content="保存" Name="btnSave" Click="btnSave_Click"  HorizontalAlignment="Left" Margin="319,257,0,0" VerticalAlignment="Top" Width="75"/>
+
+    </Grid>
+</UserControl>
